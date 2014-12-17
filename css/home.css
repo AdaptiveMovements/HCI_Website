@@ -121,9 +121,33 @@ img {
 	background-color: black;
 
 }
-
 .slideshow{
+	padding-top: 10px;
+}
 
+.newsletter {
+	background: none repeat scroll 0% 0% #E9E9E9;
+	padding: 20px;
+	text-align: center;
+	overflow: hidden;
+	clear: both;
+	width: 100%;
+}
+
+#subscribeForm{
+	width: 100%;
+	margin: 0px auto;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-size: 13px;
+	font-family: Georgia,Times,"Times New Roman",serif;
+}
+
+.newsletter-submit{
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-size: 13px;
+	font-family: Georgia,Times,"Times New Roman",serif;
 }
 
 .header.fixed
