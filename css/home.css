@@ -50,10 +50,42 @@ nav:not(.mm-menu)
 /* Images responsiveness*/
 img {
 	max-width: 100%;
-
-
 	height: auto;
+	margin: 0 auto;
 }
+
+.centerImage {
+	margin:0 auto; 
+	padding:0;
+}
+.icon-image {
+
+	font-size: 30px;
+}
+
+.icon-menu {
+
+	margin-top: 10px;
+	position: absolute;
+	left: 5%;
+}
+
+.icon-search {
+	position: absolute;
+	left: 15%;
+}
+
+.icon-user {
+	position: absolute;
+	right:15%;
+}
+
+.icon-basket {
+	position: absolute;
+	right:5%;
+}
+
+
 
 .header,
 .content,
@@ -114,7 +146,7 @@ img {
 	height: 40px;
 	position: absolute;
 	top: 0;
-	left: 10px;
+
 }
 .content
 {
