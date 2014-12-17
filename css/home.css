@@ -61,6 +61,7 @@ img {
 .icon-image {
 
 	font-size: 30px;
+	color: #FFDC00;
 }
 
 .icon-menu {
@@ -112,11 +113,12 @@ img {
 }
 
 .header{
-	background-image: url(http://demandware.edgesuite.net/aacd_prd/on/demandware.static/Sites-ASDA-Site/-/default/img/george_img/logo_george.gif);
+	background-image: url(../images/logo-george.png);
 	background-repeat:no-repeat;
 	background-position:center;
 	background-size:150px;
 	padding-top: 10px;
+	background-color: black;
 
 }
 
@@ -139,7 +141,7 @@ img {
 #mainMenu
 {
 	background: center center no-repeat transparent;
-	background-image: url( http://www.doi.gov/ui/doi/images/menu-24.png );
+	background-image: url(../images/icon-menu.png);
 
 	display: block;
 	width: 40px;
