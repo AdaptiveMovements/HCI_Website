@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Welcome to George</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+
+
+    <script src="js/headtrackr.js"></script>
+
+	</head>
+	<body>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <div class="container">
+        <div class="omb_login">
+        	<h3 class="omb_authTitle">Login or <a href="#">Sign up</a></h3>
+        	<div class="col-lg-12 text-center v-center">
+              <p class="lead">Place your face in the canvas</p>
+              <canvas id="compare" width="320" height="240" style="display:none"></canvas>
+              <video id="vid" autoplay loop width="320" height="240" style="position:absolute"></video>
+              <canvas id="overlay" width="320" height="240" style="position:relative"></canvas>
+              <canvas id="debug" width="320" height="240" style="display:none"></canvas>
+              
+              <p id='gUMMessage'></p>
+              <p>Status : <span id='headtrackerMessage'></span></p>
+              <!-- <p><input type="button" onclick="htracker.stop();htracker.start();" value="reinitiate facedetection"></input>-->
+             
+              <!-- <input type="checkbox" onclick="showProbabilityCanvas()" value="asdfasd"></input>Show probability-map</p> -->
+              
+              <script>
+                // set up video and canvas elements needed
+              
+                var videoInput = document.getElementById('vid');
+                var canvasInput = document.getElementById('compare');
+                var canvasOverlay = document.getElementById('overlay')
+                var debugOverlay = document.getElementById('debug');
+                var overlayContext = canvasOverlay.getContext('2d');
+                //videoInput.style.position = "absolute";
+                //canvasOverlay.style.position = "relative";
+                
+                /* canvasOverlay.style.top = '0px';
+                canvasOverlay.style.zIndex = '100001';
+                canvasOverlay.style.display = 'block';
+                debugOverlay.style.position = "absolute";
+                debugOverlay.style.top = '0px';
+                debugOverlay.style.zIndex = '100002';
+                debugOverlay.style.display = 'none';*/
+                
+                // add some custom messaging
+                
+                statusMessages = {
+                  "whitebalance" : "checking for stability of camera whitebalance",
+                  "detecting" : "Detecting face",
+                  "hints" : "Hmm. Detecting the face is taking a long time",
+                  "redetecting" : "Lost track of face, redetecting",
+                  "lost" : "Lost track of face",
+                  "found" : "Tracking face"
+                };
+                
+                supportMessages = {
+                  "no getUserMedia" : "Unfortunately, <a href='http://dev.w3.org/2011/webrtc/editor/getusermedia.html'>getUserMedia</a> is not supported in your browser. Try <a href='http://www.opera.com/browser/'>downloading Opera 12</a> or <a href='http://caniuse.com/stream'>another browser that supports getUserMedia</a>. Now using fallback video for facedetection.",
+                  "no camera" : "No camera found. Using fallback video for facedetection."
+                };
+                
+                document.addEventListener("headtrackrStatus", function(event) {
+                  if (event.status in supportMessages) {
+                    var messagep = document.getElementById('gUMMessage');
+                    messagep.innerHTML = supportMessages[event.status];
+                  } else if (event.status in statusMessages) {
+                    var messagep = document.getElementById('headtrackerMessage');
+                    messagep.innerHTML = statusMessages[event.status];
+                  }
+                }, true);
+                
+                // the face tracking setup
+                
+                var htracker = new headtrackr.Tracker({altVideo : {ogv : "./media/capture5.ogv", mp4 : "./media/capture5.mp4"}, calcAngles : true, ui : true, headPosition : false, debug : debugOverlay});
+                htracker.init(videoInput, canvasInput);
+                htracker.start();
+                
+                // for each facetracking event received draw rectangle around tracked face on canvas
+                
+                document.addEventListener("facetrackingEvent", function( event ) {
+                  // clear canvas
+                  overlayContext.clearRect(0,0,320,240);
+                  // once we have stable tracking, draw rectangle
+                  if (event.detection == "CS") {
+                    overlayContext.translate(event.x, event.y)
+                    overlayContext.rotate(event.angle-(Math.PI/2));
+                    overlayContext.strokeStyle = "#00CC00";
+                    overlayContext.strokeRect((-(event.width/2)) >> 0, (-(event.height/2)) >> 0, event.width, event.height);
+                    overlayContext.rotate((Math.PI/2)-event.angle);
+                    overlayContext.translate(-event.x, -event.y);
+                  }
+                });
+                
+                // turn off or on the canvas showing probability
+                function showProbabilityCanvas() {
+                  var debugCanvas = document.getElementById('debug');
+                  if (debugCanvas.style.display == 'none') {
+                    debugCanvas.style.display = 'block';
+                  } else {
+                    debugCanvas.style.display = 'none';
+                  }
+                }
+              </script>
+             
+          </div>
+        	<div class="row omb_row-sm-offset-3 omb_loginOr">
+      			<div class="col-xs-12 col-sm-6">
+      				<hr class="omb_hrOr">
+      				<span class="omb_spanOr">or</span>
+      			</div>
+    		  </div>
+      		<div class="row omb_row-sm-offset-3 omb_socialButtons">
+          	    <div class="col-xs-12 col-sm-6">
+      		        <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+      			        <i class="fa fa-facebook visible-xs"></i>
+      			        <span class="">Login with Facebook</span>
+      		        </a>
+      	        </div>	
+      		</div>
+
+      		<div class="row omb_row-sm-offset-3 omb_loginOr">
+      			<div class="col-xs-12 col-sm-6">
+      				<hr class="omb_hrOr">
+      				<span class="omb_spanOr">or</span>
+      			</div>
+      		</div>
+
+      		<div class="row omb_row-sm-offset-3">
+      			<div class="col-xs-12 col-sm-6">	
+      			    <form class="omb_loginForm" action="" autocomplete="off" method="POST">
+      					<div class="input-group">
+      						<span class="input-group-addon"><i class="fa fa-user"></i></span>
+      						<input type="text" class="form-control" name="username" placeholder="email address">
+      					</div>
+      					<span class="help-block"></span>
+      										
+      					<div class="input-group">
+      						<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+      						<input  type="password" class="form-control" name="password" placeholder="Password">
+      					</div>
+                          <span class="help-block"></span>
+
+
+                <input type=button onclick="location.href='home.html'" class="btn btn-lg btn-primary btn-block" value="Login"></input>	
+               
+      				</form>
+      			</div>
+          </div>
+
+      		<div class="row omb_row-sm-offset-3">
+      			<div class="col-xs-12 col-sm-2">
+      				<label class="checkbox">
+      					<input type="checkbox" value="remember-me">Remember Me
+      				</label>
+      			</div>
+      			<div class="col-xs-12 col-sm-2">
+      				<p class="omb_forgotPwd">
+      					<a href="#">Browse without Logging In</a>
+      				</p>
+      			</div>
+            <div class="col-xs-12 col-sm-2">
+              <p class="omb_forgotPwd">
+                <a href="#">Forgot password?</a>
+              </p>
+            </div>
+      		</div>	    	
+    	</div>
+    </div>
+	<!-- script references -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+    
+	</body>
+</html>
+
+
+
+
+
+
+
+
