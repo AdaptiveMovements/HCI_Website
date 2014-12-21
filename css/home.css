@@ -178,3 +178,305 @@ img {
 {
 	padding: 60px 50px 50px 50px;
 }
+
+
+
+
+
+
+
+.glyphicon { margin-right:5px; }
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    background: #428bca;
+}
+
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+}
+.item.list-group-item:nth-of-type(odd)
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img
+{
+    float: left;
+}
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}
+
+
+<!-- AASSA -->
+
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+.col-item
+{
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    background: #FFF;
+}
+.col-item .photo img
+{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.col-item .info
+{
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    margin-top: 1px;
+}
+
+.col-item:hover .info {
+    background-color: #F5F5DC;
+}
+.col-item .price
+{
+    /*width: 50%;*/
+    float: left;
+    margin-top: 5px;
+}
+
+.col-item .price h5
+{
+    line-height: 20px;
+    margin: 0;
+}
+
+.price-text-color
+{
+    color: #219FD1;
+}
+
+.col-item .info .rating
+{
+    color: #777;
+}
+
+.col-item .rating
+{
+    /*width: 50%;*/
+    float: left;
+    font-size: 17px;
+    text-align: right;
+    line-height: 52px;
+    margin-bottom: 10px;
+    height: 52px;
+}
+
+.col-item .separator
+{
+    border-top: 1px solid #E1E1E1;
+}
+
+.clear-left
+{
+    clear: left;
+}
+
+.col-item .separator p
+{
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.col-item .separator p i
+{
+    margin-right: 5px;
+}
+.col-item .btn-add
+{
+    width: 50%;
+    float: left;
+}
+
+.col-item .btn-add
+{
+    border-right: 1px solid #E1E1E1;
+}
+
+.col-item .btn-details
+{
+    width: 50%;
+    float: left;
+    padding-left: 10px;
+}
+.controls
+{
+    margin-top: 20px;
+}
+[data-slide="prev"]
+{
+    margin-right: 10px;
+}
+
+
+
+
+<!-- Basket -->
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+body, button{
+  font-family: 'Helvetica Neue', arial, sans-serif;
+}
+
+.controls{
+  padding: 2%;
+  background: #333;
+  color: #eee;
+}
+
+label{
+  font-weight: 300;
+  margin: 0 .4em 0 0;
+}
+
+button{
+  display: inline-block;
+  padding: .4em .8em;
+  background: #666;
+  border: 0;
+  color: #ddd;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.active{
+  background: #68b8c4;
+}
+
+button:focus{
+  outline: 0 none;
+}
+
+button + label{
+  margin-left: 1em;
+}
+
+.container{
+  padding: 2% 2% 0;
+  text-align: justify;
+  font-size: 0.1px;
+  
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+
+.container:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.container .mix,
+.container .gap{
+  display: inline-block;
+  width: 49%;
+  overflow: hidden;
+}
+
+.container .mix{
+  text-align: left;
+  background: #03899c;
+  margin-bottom: 2%;
+  display: none;
+}
+
+.container .mix.category-1{
+  border-top: 2px solid limegreen;
+}
+
+.container .mix.category-2{
+  border-top: 2px solid yellow;
+}
+
+.container .mix:after{
+  content: attr(data-myorder);
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 4% 6%;
+  font-weight: 700;
+}
+
+.container .mix:before{
+  content: '';
+  display: inline-block;
+  padding-top: 60%;
+}
+
+@media all and (min-width: 420px){
+  .container .mix,
+  .container .gap{
+    width: 32%;
+  }
+}
+
+@media all and (min-width: 640px){
+  .container .mix,
+  .container .gap{
+    width: 23.5%;
+  }
+}
+
+/**
+ * List Styles
+ */
+
+.container.list .mix{
+  width: 100%;
+}
+
+.container.list .mix:before{
+  padding-top: 40px;
+}

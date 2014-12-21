@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <title>George Clothing</title>
+
+    <link type="text/css" rel="stylesheet" href="css/home.css" />
+    <link type="text/css" rel="stylesheet" href="src/css/jquery.mmenu.all.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link type="text/css" rel="stylesheet" href="fontello/css/hci_menuicos.css" />
+
+    
+    
+    
+    <!-- for the fixed header -->
+    <style type="text/css">
+      .header,
+      .footer
+      {
+        box-sizing: border-box;
+        width: 100%;
+        position: fixed;
+      }
+      .header
+      {
+        top: 0;
+      }
+      .footer
+      {
+        bottom: 0;
+      }
+    </style>
+
+    
+    
+    <script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    <script type="text/javascript" src="src/js/jquery.mmenu.min.all.js"></script>
+    <!-- Fire the plugin onDocumentReady -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#menu").mmenu({
+          classes: "mm-light",
+           "header": {
+              "title": "PROFILE",
+              "add": true,
+              "update": true,
+           },
+           "labels": true,
+           "searchfield": {
+              "placeholder": "Search",
+              "add": true,
+              "search": true
+           }
+        });
+
+
+
+
+        $('.slideshow').slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          slide: 'div',
+          cssEase: 'linear'
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+
+  <div id="page">
+      <div class="header FixedTop">
+        <a id="mainMenu" href="#menu" class="icon-menu"></a>
+        <a id="searchIcon" href="#menu"><i class="icon-search icon-image"></i></a>
+        <a id="profileIcon" href="login.html"><i class="icon-user icon-image"></i></a>
+        <a id="basketIcon" href="#menu"><i class="icon-basket icon-image"></i></a>  
+      </div>
+
+      <div class="content" id="content">
+
+
+        <!-- HEADER 
+        =================================-->
+
+        <!-- /header container-->
+
+
+        <!-- CONTENT
+        =================================-->
+          <div class="container">
+
+            <!-- The menu -->
+            <nav id="menu">
+                <ul>
+                    <div>
+                      <a href="">asdasdasd</a>
+                    </div>
+                    <li>
+                       <div class="Buttonbar mm-nopanel">
+                          <input id="btn-1" name="btns" type="radio" />
+                          <label for="btn-1">Women</label>
+                          <input id="btn-2" name="btns" type="radio" />
+                          <label for="btn-2">Men</label>
+                          <input id="btn-3" name="btns" type="radio" />
+                          <label for="btn-3">Kids</label>
+                       </div>
+                    </li>
+                    <li><a href="">Homepage</a></li>
+                    <li class="Label">Shop</li>
+                    <li><a href="/about">Shop By Product</a>
+                       <ul>
+                          <li><a href="">Accesories</a></li>
+                          <li><a href="">Jeans</a></li>
+                          <li><a href="">Tops</a></li>
+                          <li><a href="">Lingerie</a></li>
+                          <li><a href="">Maternity</a></li>
+                          <li><a href="">Skirts</a></li>
+                          <li><a href="">Dresses</a></li>
+                          <li><a href="">Jumpers</a></li>
+                          <li><a href="">Footwear</a></li>
+                       </ul>
+                    </li>
+                    <li><a href="/about">Special Offers</a>
+                       <ul>
+                          <li><a href="">Mix & Match Lingerie</a></li>
+                          <li><a href="">Mix & Match Socks</a></li>
+                          <li><a href="">Mix & Match Nightwear</a></li>
+                       </ul>
+                    </li>
+                    <li><a href="/about">Collections</a>
+                       <ul>
+                          <li><a href="">Nightwear</a></li>
+                          <li><a href="">Fancy Dress</a></li>
+                          <li><a href="">Thermal</a></li>
+                          <li><a href="">Winter</a></li>
+                       </ul>
+                    </li>
+                    <li><a href="/about">Christmas</a>
+                       <ul>
+                          <li><a href="">Christmas Jumpers</a></li>
+                          <li><a href="">Novelty</a></li>
+                          <li><a href="">Party</a></li>
+                       </ul>
+                    </li>
+                    <li class="Label">More Information</li>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Size Guide</a></li>
+                    <li><a href="">My orders</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Delivery Options</a></li>
+                    <li><a href="">Store Finder</a></li>
+                    <li class="Label">Settings</li>
+                    <li><a href="/contact/address">App Settings</a></li>
+                    <li><a href="/contact/form">My Account</a></li>
+                </ul>
+            </nav>
+        </div>
+      </div>
+      <div class="newsletter">
+        <form class="" action="http://cl.s6.exct.net/subscribe.aspx?lid=13667" id="subscribeForm" name="subscribeForm" method="post">
+          <span style="word-wrap: break-word;">The latest info about the newest releases &amp; much more</span> <br>
+          <input class="newsletter-input exposer" name="Email Address" value="" type="text">
+          <input class="newsletter-submit" value="Subscribe" type="submit">
+          <input name="thx" value="" type="hidden">
+          <input name="err" value="" type="hidden">
+          <input name="usub" value="" type="hidden">
+          <input name="MID" value="" type="hidden">
+          <input name="ETSubscriberKey" value="SZ_" style="display:none" type="text">
+        </form>   
+      </div>
+    
+
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+  </body>
+</html>
