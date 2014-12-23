@@ -35,6 +35,7 @@ button{
   font-weight: 300;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 5px;
 }
 
 button.active{
@@ -73,17 +74,21 @@ button + label{
 
 .container .mix{
   text-align: left;
-  background: #03899c;
+  background: #E1E1E1;
   margin-bottom: 2%;
   display: none;
+
 }
 
 .container .mix.category-1{
-  border-top: 2px solid limegreen;
+  border-top: 10px solid #FFDC00;
+  border-top-left-radius:10%;
+
 }
 
 .container .mix.category-2{
-  border-top: 2px solid yellow;
+  border-top: 10px solid red;
+  border-top-left-radius:10%;
 }
 
 .container .mix:after{
@@ -99,7 +104,7 @@ button + label{
 .container .mix:before{
   content: '';
   display: inline-block;
-  padding-top: 60%;
+  /* padding-top: 60%; */
 }
 
 @media all and (min-width: 420px){
@@ -138,7 +143,7 @@ body
 	background-color: #fff;
 	font-family: Arial, Helvetica, Verdana;
 	font-size: 14px;
-	line-height: 22px;
+	/*line-height: 22px;*/
 	color: #666;
 	position: relative;
 	-webkit-text-size-adjust: none;
@@ -309,5 +314,17 @@ img {
 	padding: 60px 50px 50px 50px;
 }
 
+
+
+<!-- Dialog -->
+
+.modal-dialog {}
+.thumbnail {margin-bottom:6px;}
+
+.carousel-control.left,.carousel-control.right{
+  background-image:none;
+  margin-top:10%;
+  width:5%;
+}
 
 
