@@ -1,6 +1,4 @@
-
-
-<!-- Basket -->
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
 
 *{
   -webkit-box-sizing: border-box;
@@ -53,7 +51,7 @@ button + label{
 .container{
   padding: 2% 2% 0;
   text-align: justify;
-  font-size: 0.1px;
+
   
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
@@ -83,17 +81,19 @@ button + label{
 .container .mix.category-1{
   border-top: 10px solid #FFDC00;
   border-top-left-radius:10%;
+  border-top-right-radius:10%;
 
 }
 
 .container .mix.category-2{
   border-top: 10px solid red;
   border-top-left-radius:10%;
+  border-top-right-radius:10%;
 }
 
 .container .mix:after{
   content: attr(data-myorder);
-  color: white;
+  /*color: white;*/ 
   font-size: 16px;
   display: inline-block;
   vertical-align: top;
@@ -144,7 +144,7 @@ body
 	font-family: Arial, Helvetica, Verdana;
 	font-size: 14px;
 	/*line-height: 22px;*/
-	color: #666;
+	/*color: #666;*/
 	position: relative;
 	-webkit-text-size-adjust: none;
 }
@@ -316,7 +316,6 @@ img {
 
 
 
-<!-- Dialog -->
 
 .modal-dialog {}
 .thumbnail {margin-bottom:6px;}
@@ -327,4 +326,123 @@ img {
   width:5%;
 }
 
+
+
+/* CSS used here will be applied after bootstrap.css */
+#carousel {
+    margin-top: 20px;
+}
+.item .thumb {
+	width: 25%;
+	cursor: pointer;
+	float: left;
+}
+.item .thumb img, .item img {
+	width: 100%;	
+}
+
+
+.col-item
+{
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    background: #FFF;
+}
+.col-item .photo img
+{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.col-item .info
+{
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    margin-top: 1px;
+}
+
+.col-item:hover .info {
+    background-color: #F5F5DC;
+}
+.col-item .price
+{
+    /*width: 50%;*/
+    float: left;
+    margin-top: 5px;
+}
+
+.col-item .price h5
+{
+    line-height: 20px;
+    margin: 0;
+}
+
+.price-text-color
+{
+    color: #219FD1;
+}
+
+.col-item .info .rating
+{
+    color: #777;
+}
+
+.col-item .rating
+{
+    /*width: 50%;*/
+    float: left;
+    font-size: 17px;
+    text-align: right;
+    line-height: 52px;
+    margin-bottom: 10px;
+    height: 52px;
+}
+
+.col-item .separator
+{
+    border-top: 1px solid #E1E1E1;
+}
+
+.clear-left
+{
+    clear: left;
+}
+
+.col-item .separator p
+{
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.col-item .separator p i
+{
+    margin-right: 5px;
+}
+.col-item .btn-add
+{
+    width: 50%;
+    float: left;
+}
+
+.col-item .btn-add
+{
+    border-right: 1px solid #E1E1E1;
+}
+
+.col-item .btn-details
+{
+    width: 50%;
+    float: left;
+    padding-left: 10px;
+}
+.controls
+{
+    margin-top: 20px;
+}
+[data-slide="prev"]
+{
+    margin-right: 10px;
+}
 
