@@ -90,19 +90,20 @@ button + label{
   border-top-left-radius:10%;
   border-top-right-radius:10%;
 }
-
+/*
 .container .mix:after{
   content: attr(data-myorder);
-  /*color: white;*/ 
+  color: white;
   font-size: 16px;
   display: inline-block;
   vertical-align: top;
   padding: 4% 6%;
   font-weight: 700;
 }
+*/
 
 .container .mix:before{
-  content: '';
+  
   display: inline-block;
   /* padding-top: 60%; */
 }
@@ -380,6 +381,11 @@ img {
 .price-text-color
 {
     color: #219FD1;
+}
+
+.price-text-colorsale
+{
+    color: #F00;
 }
 
 .col-item .info .rating
