@@ -74,6 +74,32 @@
 
          });
 
+        $(".btnAddQuickView").each(function(){
+
+            $(this).click(function(){
+                $(".modal-body").notify(
+                  "Item added to Basket", 
+                  { position:"bottom center" }
+                );
+            });
+
+         });
+
+
+        $(".btnFavotireQuickView").each(function(){
+
+            $(this).click(function(){
+                $(".modal-body").notify(
+                  "Item added to Favorites", 
+                  { position:"bottom center" }
+                );
+            });
+
+         });
+
+
+         
+
          
 
 
@@ -436,7 +462,7 @@
          <div class="mix triangle category-2" data-myorder="7">
             <div class="col-item">
                <div class="photo">
-                  <a title="Image 7" href="#">
+                  <a title="Pink Dress" href="#">
             <img class="thumbnail img-responsive" id="prodImg" src="http://images.asos-media.com/inv/media/9/1/2/0/4040219/coralblack/image1xl.jpg">
                   </a>
                </div>
@@ -444,7 +470,7 @@
                   <div class="row">
                      <div class="price col-md-6">
                         <h5>
-                          Product Title
+                          Pink Dress
                         </h5>
                         <h5 class="price-text-color">
                            <del>£17.99</del><a class="price-text-colorsale">&nbsp;&nbsp;£22.99</a>
@@ -629,8 +655,64 @@
                      </a>    
                   </div>
                </div>
-               <div class="modal-footer">
-                  <button class="btn btn-default" data-dismiss="modal">Close</button>
+               <div class="modal-footer" style="">
+
+<div style="width:45%; float:left;">
+  
+
+
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle btn-lg btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+    Select Size
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Extra Small</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Small</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Medium</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Large</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Extra Large</a></li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle btn-lg btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+    Select Colour
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">White</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Black</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Red</a></li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle btn-lg btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+    Select Quatity
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
+  </ul>
+</div>
+<br>
+
+</div>
+
+  
+
+                  <div style="width:45%; float:right; padding-top: 7px">
+                  <a href="product.html" class="btn btn-success btn-lg btn-block" style="text-decoration:none;"><span class="glyphicon glyphicon-plus"></span> View full Details</a>
+                  <button class="btn btn-success btn-lg btn-block btnAddQuickView"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Basket</button>
+                  <button class="btn btn-danger btn-lg btn-block btnFavotireQuickView"><span class="glyphicon glyphicon-heart"></span> Add to Favorites</button>
+                    
+                  <button class="btn btn-default btn-lg" data-dismiss="modal">Close</button>
+
+
+                  </div>
                </div>
             </div>
          </div>

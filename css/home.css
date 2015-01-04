@@ -174,7 +174,6 @@ p
 a, a:link, a:active, a:visited, a:hover
 {
 	color: inherit;
-	text-decoration: underline;
 }
 
 nav:not(.mm-menu)
@@ -338,9 +337,11 @@ img {
 	cursor: pointer;
 	float: left;
 }
+/*
 .item .thumb img, .item img {
 	width: 100%;	
 }
+*/
 
 
 .col-item
