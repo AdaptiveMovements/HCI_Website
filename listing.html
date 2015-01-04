@@ -30,162 +30,11 @@
       <script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
       <script type="text/javascript" src="src/js/jquery.mmenu.min.all.js"></script>
-      <!-- Fire the plugin onDocumentReady -->
-      <script type="text/javascript">
-         $(document).ready(function() {
-         
-           $('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
-           $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
-           $("#menu").mmenu({
-             classes: "mm-light",
-              "labels": true,
-              "searchfield": {
-                 "placeholder": "Search",
-                 "add": true,
-                 "search": true
-              }
-           });
+
+    <script type="text/javascript" src="js/notification.js"></script>
+        <script type="text/javascript" src="js/mixitup.js"></script>
+
     
-
-
-         $.notify.defaults({ className: "success" });
-
-         $(".btn-add").each(function(){
-
-            $(this).click(function(){
-                $(".icon-basket").notify(
-                  "Item added to Basket", 
-                  { position:"left middle" }
-                );
-            });
-
-         });
-
-         $(".btndetails2").each(function(){
-
-            $(this).click(function(){
-
-                $(".icon-user").notify(
-                  "Item added to Favorites",
-                  { position:"left middle" }
-                );
-
-            });
-
-         });
-
-        $(".btnAddQuickView").each(function(){
-
-            $(this).click(function(){
-                $(".modal-body").notify(
-                  "Item added to Basket", 
-                  { position:"bottom center" }
-                );
-            });
-
-         });
-
-
-        $(".btnFavotireQuickView").each(function(){
-
-            $(this).click(function(){
-                $(".modal-body").notify(
-                  "Item added to Favorites", 
-                  { position:"bottom center" }
-                );
-            });
-
-         });
-
-
-         
-
-         
-
-
-
-
-         
-         $('.slideshow').slick({
-             dots: true,
-             infinite: true,
-             speed: 500,
-             fade: true,
-             slide: 'div',
-             cssEase: 'linear'
-           });
-         });
-         
-         
-         
-          // We will be using MixItUp's 'changeLayout' API method to add and remove a 'list' class to the container. This class changes the styling of our target elements (see CSS).
-           
-          // NB: Changing layout doesn't have to be between grid/list only, we can add any class we want and use it to affect the styling of our elements.
-         
-         $(function(){
-         
-           var layout = 'grid', // Store the current layout as a variable
-               $container = $('#Container'), // Cache the MixItUp container
-               $changeLayout = $('#ChangeLayout'); // Cache the changeLayout button
-           
-           // Instantiate MixItUp with some custom options:
-           
-           $container.mixItUp({
-             animation: {
-               animateChangeLayout: true, // Animate the positions of targets as the layout changes
-               animateResizeTargets: true, // Animate the width/height of targets as the layout changes
-               effects: 'fade rotateX(-40deg) translateZ(-100px)'
-             },
-             layout: {
-               containerClass: 'grid' // Add the class 'list' to the container on load
-             }
-           });
-           
-           // MixItUp does not provide a default "change layout" button, so we need to make our own and bind it with a click handler:
-           
-           $changeLayout.on('click', function(){
-             
-             // If the current layout is a list, change to grid:
-             
-             if(layout == 'list'){
-               layout = 'grid';
-               
-               $changeLayout.text('List'); // Update the button text
-               
-               $container.mixItUp('changeLayout', {
-                 containerClass: layout // change the container class to "grid"
-               });
-               
-             // Else if the current layout is a grid, change to list:  
-             
-             } else {
-               layout = 'list';
-               
-               $changeLayout.text('Grid'); // Update the button text
-               
-               $container.mixItUp('changeLayout', {
-                 containerClass: layout // Change the container class to 'list'
-               });
-             }
-           });
-           
-         });
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-      </script>
    </head>
    <body>
       <div id="page">
@@ -197,7 +46,7 @@
       </div>
       
 
-      <div id="Container" class="container">
+      <div id="Container" class="container mainContainer">
         <div class="controls" style="margin-top:60px; margin-bottom:10px; border-radius:2em;">
           <div class="controlFilter">
          <label>Filter:</label>
