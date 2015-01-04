@@ -45,8 +45,42 @@
                  "search": true
               }
            });
+    
+
+
+
+
+
+
+
+
+
+
+         $(".btn-add").each(function(){
+
+            $(this).click(function(){
+
+                $(this).notify("Item added to Basket", "success");
+
+            });
+
+         });
+
+         $(".btndetails2").each(function(){
+
+            $(this).click(function(){
+
+                $(this).notify("Item added to Favorites", "success");
+
+            });
+
+         });
+
          
-         
+
+
+
+
          
          $('.slideshow').slick({
              dots: true,
@@ -184,7 +218,7 @@
                      <p class="btn-details" style="width:33%">
                         <i class="glyphicon glyphicon-plus" style="font-size:30px"></i><a href="product.html" class="hidden-sm">More</a>
                      </p>
-                     <p class="btn-details" style="width:33%; border-left: 1px solid #E1E1E1;">
+                     <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
                         <i class="glyphicon glyphicon-heart" style="font-size:30px"></i><a href="#" class="hidden-sm">Favorites</a>
                      </p>
                   </div>
@@ -210,7 +244,7 @@
 
                         <h5 class="price-text-color">
 
-                           <del class="price-text-colorsale"> £12.99 </del>  £9.99 
+                           <del>£9.99</del><a class="price-text-colorsale">&nbsp;&nbsp;£12.99</a>
                         
                         </h5>
 
@@ -230,7 +264,7 @@
                      <p class="btn-details" style="width:33%">
                         <i class="glyphicon glyphicon-plus" style="font-size:30px"></i><a href="product.html" class="hidden-sm">More</a>
                      </p>
-                     <p class="btn-details" style="width:33%; border-left: 1px solid #E1E1E1;">
+                     <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
                         <i class="glyphicon glyphicon-heart" style="font-size:30px"></i><a href="#" class="hidden-sm">Favorites</a>
                      </p>
                   </div>
@@ -294,7 +328,7 @@
                           Product Title
                         </h5>
                         <h5 class="price-text-color">
-                           <del class="price-text-colorsale">£11.99</del>£14.99
+                           <del>£11.99</del><a class="price-text-colorsale">&nbsp;&nbsp;£14.99</a>
                         </h5>
                      </div>
                      <div class="rating col-md-6">
@@ -374,7 +408,8 @@
                           Product Title
                         </h5>
                         <h5 class="price-text-color">
-                           <del class="price-text-colorsale">£14.99</del> £19.99
+                           <del>£14.99</del><a class="price-text-colorsale">&nbsp;&nbsp;£19.99</a>
+
                         </h5>
                      </div>
                      <div class="rating col-md-6">
@@ -414,7 +449,8 @@
                           Product Title
                         </h5>
                         <h5 class="price-text-color">
-                           <del class="price-text-colorsale">£17.99</del> £22.99
+                           <del>£17.99</del><a class="price-text-colorsale">&nbsp;&nbsp;£22.99</a>
+
                         </h5>
                      </div>
                      <div class="rating col-md-6">
@@ -494,7 +530,9 @@
                           Product Title
                         </h5>
                         <h5 class="price-text-color">
-                           <del class="price-text-colorsale">£20.99</del> £27.99
+
+                           <del>£20.99</del><a class="price-text-colorsale">&nbsp;&nbsp;£27.99</a>
+
                         </h5>
                      </div>
                      <div class="rating col-md-6">
@@ -693,6 +731,7 @@
          </form>
       </div>
       <script src="js/bootstrap.min.js"></script>
+      <script src="js/notify.min.js"></script>
       <script src="js/jquery.mixitup.js"></script>
       <script src="js/scripts.js"></script>
       <script type="text/javascript" src="slick/slick.min.js"></script>

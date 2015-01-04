@@ -386,6 +386,7 @@ img {
 .price-text-colorsale
 {
     color: #F00;
+    text-decoration: none;
 }
 
 .col-item .info .rating
