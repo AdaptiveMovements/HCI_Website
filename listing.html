@@ -48,20 +48,15 @@
     
 
 
-
-
-
-
-
-
-
+         $.notify.defaults({ className: "success" });
 
          $(".btn-add").each(function(){
 
             $(this).click(function(){
-
-                $(this).notify("Item added to Basket", "success");
-
+                $.notify(
+                  "Item added to Basket", 
+                  { position:"bottom center" }
+                );
             });
 
          });
@@ -70,7 +65,10 @@
 
             $(this).click(function(){
 
-                $(this).notify("Item added to Favorites", "success");
+                $.notify(
+                  "Item added to Favorites",
+                  { position:"bottom center" }
+                );
 
             });
 
