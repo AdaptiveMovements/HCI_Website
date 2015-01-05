@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <title>George Clothing</title>
+
+    <link type="text/css" rel="stylesheet" href="css/home.css" />
+    <link type="text/css" rel="stylesheet" href="src/css/jquery.mmenu.all.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link type="text/css" rel="stylesheet" href="fontello/css/hci_menuicos.css" />
+    <link href="css/bootstrap-switch.css" rel="stylesheet">
+
+
+
+    
+    
+    
+    <!-- for the fixed header -->
+    <style type="text/css">
+      .header,
+      .footer
+      {
+        box-sizing: border-box;
+        width: 100%;
+        position: fixed;
+      }
+      .header
+      {
+        top: 0;
+      }
+      .footer
+      {
+        bottom: 0;
+      }
+    </style>
+
+
+    <script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    <script type="text/javascript" src="src/js/jquery.mmenu.min.all.js"></script>
+    <!-- Fire the plugin onDocumentReady -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#menu").mmenu({
+          classes: "mm-light",
+           "header": {
+              "title": "PROFILE",
+              "add": true,
+              "update": true,
+           },
+           "labels": true,
+           "searchfield": {
+              "placeholder": "Search",
+              "add": true,
+              "search": true
+           }
+        });
+
+
+
+
+        $('.slideshow').slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          slide: 'div',
+          cssEase: 'linear'
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+
+  <div id="page">
+      <div class="header FixedTop">
+        <a id="mainMenu" href="#menu" class="icon-menu"></a>
+        <a id="searchIcon" href="#menu"><i class="icon-search icon-image"></i></a>
+        <a id="profileIcon" href="login.html"><i class="icon-user icon-image"></i></a>
+        <a id="basketIcon" href="#menu"><i class="icon-basket icon-image"></i></a>  
+      </div>
+
+      <div class="row">
+        <h1 style="margin-top: 100px;margin-left: 50px; font-size: 60px;">My Account</h1>
+   
+
+<div class="container-fluid">
+              <div class="col-md-12" style="margin-top: 40px; margin-left:10px;">
+                <ul id="myTab" class="nav nav-tabs nav_tabs">
+                  <li class="active"><a href="#service-one" data-toggle="tab">Adress Book</a></li>
+                  <li><a href="#service-two" data-toggle="tab">Wallet</a></li>
+                  <li><a href="#service-three" data-toggle="tab">Settings</a></li>
+                  <li><a href="#service-four" data-toggle="tab">Order History</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+
+                  <!--address book-->
+                  <div class="tab-pane fade in active" id="service-one">
+                    <br>
+                    <address>
+  <strong>John Doe</strong><br>
+  795 Folsom Ave, Suite 600<br>
+  San Francisco, CA 94107<br>
+  <abbr title="Phone">P:</abbr> (123) 456-7890<br>
+
+
+</address>
+              
+                  </div>
+                  <!-- wallet-->
+                  <div class="tab-pane fade" id="service-two">
+                    <br>
+                    <div class="card" style="background-color:#DDD; width: 300px; height: 60px;">
+                      <br>
+                    <label style="margin-left:5px;"><input type="radio" name="male" checked> <img src="images/visa-logo-37x12.gif"> xxxx xxxx xxxx 9040   Mr John Doe</label>
+                  </div>
+                  </div>
+                  <!-- Settings-->
+                  <div class="tab-pane fade" id="service-three">
+                    <input type="checkbox" name="my-checkbox" checked>
+
+                    
+                  </div>
+                  <!-- Order History-->
+                  <div class="tab-pane fade" id="service-four">
+                    <br> No Previous Orders.. :(
+                   
+                  </div>
+                </div>
+                <hr>
+              </div>
+              <!-- /col-md-12 -->
+            </div>
+            <!-- /container-fluid -->
+          </div>
+          <!-- /col-sm-6 -->
+        </div>
+        <div>
+          <button type="button" class="btn btn-success">Continue Shopping</button>
+        </div>
+
+          <div class="container">
+
+            <!-- The menu -->
+            <nav id="menu">
+                <ul>
+                    <div>
+                      <a href="">asdasdasd</a>
+                    </div>
+                    <li>
+                       <div class="Buttonbar mm-nopanel">
+                          <input id="btn-1" name="btns" type="radio" />
+                          <label for="btn-1">Women</label>
+                          <input id="btn-2" name="btns" type="radio" />
+                          <label for="btn-2">Men</label>
+                          <input id="btn-3" name="btns" type="radio" />
+                          <label for="btn-3">Kids</label>
+                       </div>
+                    </li>
+                    <li><a href="">Homepage</a></li>
+                    <li class="Label">Shop</li>
+                    <li><a href="/about">Shop By Product</a>
+                       <ul>
+                          <li><a href="">Accesories</a></li>
+                          <li><a href="">Jeans</a></li>
+                          <li><a href="">Tops</a></li>
+                          <li><a href="">Lingerie</a></li>
+                          <li><a href="">Maternity</a></li>
+                          <li><a href="">Skirts</a></li>
+                          <li><a href="">Dresses</a></li>
+                          <li><a href="">Jumpers</a></li>
+                          <li><a href="">Footwear</a></li>
+                       </ul>
+                    </li>
+                    <li><a href="/about">Special Offers</a>
+                       <ul>
+                          <li><a href="">Mix & Match Lingerie</a></li>
+                          <li><a href="">Mix & Match Socks</a></li>
+                          <li><a href="">Mix & Match Nightwear</a></li>
+                       </ul>
+                    </li>
+                    <li><a href="/about">Collections</a>
+                       <ul>
+                          <li><a href="">Nightwear</a></li>
+                          <li><a href="">Fancy Dress</a></li>
+                          <li><a href="">Thermal</a></li>
+                          <li><a href="">Winter</a></li>
+                       </ul>
+                    </li>
+                    <li><a href="/about">Christmas</a>
+                       <ul>
+                          <li><a href="">Christmas Jumpers</a></li>
+                          <li><a href="">Novelty</a></li>
+                          <li><a href="">Party</a></li>
+                       </ul>
+                    </li>
+                    <li class="Label">More Information</li>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Size Guide</a></li>
+                    <li><a href="">My orders</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Delivery Options</a></li>
+                    <li><a href="">Store Finder</a></li>
+                    <li class="Label">Settings</li>
+                    <li><a href="/contact/address">App Settings</a></li>
+                    <li><a href="/contact/form">My Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+  
+    
+
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/bootstrap-switch.js"></script>
+
+  </body>
+</html>

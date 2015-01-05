@@ -1,6 +1,16 @@
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
 
 
+.list-group-item
+{
+
+  padding: 20px 30px;
+
+  background-color: #ddd;
+ 
+
+}
+
 /*  Site Map */
 .breadcrumbs {
       height: 20px;
