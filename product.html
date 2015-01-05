@@ -9,6 +9,7 @@
     <link type="text/css" rel="stylesheet" href="fontello/css/hci_menuicos.css" />
     <link type="text/css" rel="stylesheet" href="src/css/jquery.mmenu.all.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
     <!-- for the fixed header -->
     <style type="text/css">
       .header,
@@ -35,6 +36,8 @@
 
     <script type="text/javascript" src="js/notification.js"></script>
     <script src="js/productScript.js"></script>
+
+    <script src="js/jquery.share.js"></script>
     <!-- Fire the plugin onDocumentReady -->
     <script type="text/javascript">
 
@@ -51,10 +54,11 @@
            }
         });
 
-
       
       
-      
+         $('#mydiv').share({
+        networks: ['facebook','pinterest','googleplus','twitter','email']
+      });
       
         $('.selectpicker').selectpicker({
         style: 'btn-info',
@@ -89,6 +93,7 @@
       
       
     </script>
+
   </head>
   <body>
     <div id="page">
@@ -190,6 +195,25 @@
                 </a>
               </div>
               <!-- /thumbcarousel -->
+     
+
+              <!-- SOCIAL SHARE -->
+
+
+              <br>
+              <h1 style="text-align:center;">SHARE THIS PRODUCT</h1>
+    <div id="mydiv" style="text-align:center;"></div>
+         
+
+
+
+
+
+
+
+
+
+
             </div>
             <!-- /clearfix -->
           </div>
@@ -1143,6 +1167,7 @@
     
     <script src="js/bootstrap.min.js"></script>
     <script src="js/notify.min.js"></script>
+    <script src="js/jquery.share.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.5.4/bootstrap-select.js" />
     </body>
     </html>
