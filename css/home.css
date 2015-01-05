@@ -28,7 +28,7 @@ button{
   padding: .4em .8em;
   /*background: #666;*/
   border: 0;
-  color: #ddd;
+  color: #000;
   font-size: 16px;
   font-weight: 300;
   border-radius: 4px;
@@ -457,7 +457,19 @@ img {
 .slick-prev {
   color: #000;
 }
-/* Index Slider 2 */
+
+
+
+@media screen and (max-width: 1100px) {
+  
+    .mainContainer{
+      text-align: center;
+    }
+    .container.list .mix{
+      width: 60%;
+    }
+
+    /* Index Slider 2 */
 
 
 .sliderCenter {
@@ -486,16 +498,6 @@ img {
     z-index: 1;
     }
 
-
-
-@media screen and (max-width: 1100px) {
-  
-    .mainContainer{
-      text-align: center;
-    }
-    .container.list .mix{
-      width: 60%;
-    }
 }
 
 
