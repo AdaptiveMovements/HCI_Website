@@ -1,6 +1,37 @@
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
 
 
+.filter {
+  border: 0.2em solid;
+}
+
+.sort {
+  border: 0.2em solid;
+
+}
+
+#ChangeLayout{
+    border: 0.2em solid;
+
+}
+
+.filterNew {
+  border: 0.2em solid yellow;
+}
+
+
+.filterSale {
+
+  border: 0.2em solid #F00;
+
+}
+
+
+
+
+
+
+/* SEB */
 .list-group-item
 {
 
