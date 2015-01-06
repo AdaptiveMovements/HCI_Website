@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" href="src/css/jquery.mmenu.all.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link type="text/css" rel="stylesheet" href="fontello/css/hci_menuicos.css" />
-    <link href="css/bootstrap-switch.css" rel="stylesheet">
+   
 
 
 
@@ -75,11 +75,15 @@
         });
       });
     </script>
+    <script src="js/bootstrap-switch.js"></script>
   </head>
 
   <body>
 
-  <div id="page">
+
+
+          <div class="container">
+            <div id="page">
       <div class="header FixedTop">
         <a id="mainMenu" href="#menu" class="icon-menu"></a>
         <a id="searchIcon" href="#menu"><i class="icon-search icon-image"></i></a>
@@ -95,7 +99,7 @@
               <div class="col-md-12" style="margin-top: 40px; margin-left:10px;">
                 <ul id="myTab" class="nav nav-tabs nav_tabs">
                   <li class="active"><a href="#service-one" data-toggle="tab">Adress Book</a></li>
-                  <li><a href="#service-two" data-toggle="tab">Wallet</a></li>
+                  <li><a href="#service-two" data-toggle="tab">Cards</a></li>
                   <li><a href="#service-three" data-toggle="tab">Settings</a></li>
                   <li><a href="#service-four" data-toggle="tab">Order History</a></li>
                 </ul>
@@ -121,13 +125,102 @@
                       <br>
                     <label style="margin-left:5px;"><input type="radio" name="male" checked> <img src="images/visa-logo-37x12.gif"> xxxx xxxx xxxx 9040   Mr John Doe</label>
                   </div>
+                   <br>
+                    <div class="card" style="background-color:#DDD; width: 300px; height: 60px;">
+                      <br>
+                    <label style="margin-left:5px;"><input type="radio" name="male" > <img src="images/mastercard.gif"> xxxx xxxx xxxx 4543   Mr John Doe</label>
+                  </div>
                   </div>
                   <!-- Settings-->
                   <div class="tab-pane fade" id="service-three">
-                    <input type="checkbox" name="my-checkbox" checked>
 
-                    
+                    Currency
+                    <div class="btn-group" style="margin-left: 142px;">
+                      <button id="currency" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        £ GBP <span class="caret"></span>
+                      </button>
+                      <ul id="dropdownone" class="dropdown-menu" role="menu">
+                        
+                        <li><a href="#">$ AUD</a></li>
+                        <li><a href="#">€ EUR</a></li>
+                        <li><a href="#">£ GBP</a></li>
+                        <li><a href="#">$ USD</a></li>
+                      </ul>
+                    </div>
+                    <script type="text/javascript">
+                      $(function(){
+  
+                    $("#dropdownone li").click(function(){
+                      
+                      $("#currency").text($(this).text());
+                       
+                      });
+
+                    });
+                    </script>
+
+
+<br><br>
+                  Sizes
+                    <div class="btn-group" style="margin-left:166px">
+                      <button id="sizes" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        UK <span class="caret"></span>
+                      </button>
+                      <ul id="dropdowntwo" class="dropdown-menu" role="menu">
+                        <li><a href="#">AU</a></li>
+                        <li><a href="#">EU</a></li>
+                        <li><a href="#">UK</a></li>
+                        <li><a href="#">US</a></li>
+                      </ul>
+                    </div>
+                    <script type="text/javascript">
+                      $(function(){
+  
+                    $("#dropdowntwo li").click(function(){
+                      
+                      $("#sizes").text($(this).text());
+                       
+                      });
+
+                    });
+                    </script>
+<br><br>
+
+                    Connect to Facebook
+                    <div class="btn-group" data-toggle="buttons" style="margin-left: 68px">
+                      <label class="btn btn-default btn-sm active" style="margin-right:0px;" >
+                          <input type="radio" name="options" > ON
+                      </label>
+                      <label class="btn btn-primary btn-sm">
+                          <input type="radio" name="options"> OFF
+                      </label>
+
+           
                   </div>
+                  <br><br>
+                       Connect to Google
+                      <div class="btn-group" data-toggle="buttons" style="margin-left: 83px">
+                      <label class="btn btn-default btn-sm active" style="margin-right:0px;" >
+                          <input type="radio" name="options" > ON
+                      </label>
+                      <label class="btn btn-primary btn-sm">
+                          <input type="radio" name="options"> OFF
+                      </label>
+                  </div>
+
+                  <br><br>
+
+                  Receive Promotional Emails
+                      <div class="btn-group" data-toggle="buttons" style="margin-left: 25px">
+                      <label class="btn btn-default btn-sm active" style="margin-right:0px;" >
+                          <input type="radio" name="options" > ON
+                      </label>
+                      <label class="btn btn-primary btn-sm">
+                          <input type="radio" name="options"> OFF
+                      </label>
+                  </div>
+
+                </div>
                   <!-- Order History-->
                   <div class="tab-pane fade" id="service-four">
                     <br> No Previous Orders.. :(
@@ -146,10 +239,11 @@
           <button type="button" class="btn btn-success">Continue Shopping</button>
         </div>
 
-          <div class="container">
-
-            <!-- The menu -->
-            <nav id="menu">
+            
+            
+        </div>
+        <!-- The menu -->
+        <nav id="menu">
                 <ul>
                     <div>
                       <a href="">asdasdasd</a>
@@ -213,14 +307,15 @@
                     <li><a href="/contact/form">My Account</a></li>
                 </ul>
             </nav>
-        </div>
     
   
     
 
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
-<script src="js/bootstrap-switch.js"></script>
+
+
+
 
   </body>
 </html>

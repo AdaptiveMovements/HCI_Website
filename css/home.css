@@ -865,6 +865,15 @@ img {
 
 
 
+/* Avatar Slider */
+.avatarSlider{
+  padding: 5px;
+}
+ 
+.productBox:hover { 
+  opacity: 0.3; filter: alpha(opacity=30);
+} 
+
 @media screen and (max-width: 1100px) {
   
     .mainContainer{
