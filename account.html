@@ -13,6 +13,7 @@
     <link type="text/css" rel="stylesheet" href="src/css/jquery.mmenu.all.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link type="text/css" rel="stylesheet" href="fontello/css/hci_menuicos.css" />
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
    
 
 
@@ -80,10 +81,7 @@
 
   <body>
 
-
-
-          <div class="container">
-            <div id="page">
+  <div id="page">
       <div class="header FixedTop">
         <a id="mainMenu" href="#menu" class="icon-menu"></a>
         <a id="searchIcon" href="#menu"><i class="icon-search icon-image"></i></a>
@@ -92,21 +90,40 @@
       </div>
 
       <div class="row">
-        <h1 style="margin-top: 100px;margin-left: 50px; font-size: 60px;">My Account</h1>
-   
+        <h1 style="margin-top: 100px;margin-left: 20px; font-size: 60px; font: 400 4.725em/1.38 FontAwesome;">My Account</h1>
+        <div>
+        <h2 style="margin-left: 20px; font: 400 2em/1.38 FontAwesome;">Hello John! <br> Welcome To Your Account <button style="margin-left: 50px;" type="button" class="btn btn-success">Continue Shopping</button></h2>
+        
+        
+          
+        </div
 
 <div class="container-fluid">
               <div class="col-md-12" style="margin-top: 40px; margin-left:10px;">
                 <ul id="myTab" class="nav nav-tabs nav_tabs">
-                  <li class="active"><a href="#service-one" data-toggle="tab">Adress Book</a></li>
-                  <li><a href="#service-two" data-toggle="tab">Cards</a></li>
+                  <li class="active"><a href="#service-zero" data-toggle="tab">Overview</a></li>
+                  <li><a href="#service-one" data-toggle="tab">Adress Book</a></li>
+                  <li><a href="#service-two" data-toggle="tab">Wallet</a></li>
                   <li><a href="#service-three" data-toggle="tab">Settings</a></li>
                   <li><a href="#service-four" data-toggle="tab">Order History</a></li>
+                  <li><a href="#service-five" data-toggle="tab">Avatar</a></li>
+                  <li><a href="#service-six" data-toggle="tab">Your Wishlist</a></li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
 
+                  <!-- Account Overview-->
+                  <div class="tab-pane fade in active" id="service-zero"> <!-- slightly bad practice??? haha :\-->
+                    <br> Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;John Doe
+                    <br><br>
+                    Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Johndoe@gmail.com
+                    <br><br>
+                    <button type="button" class="btn btn-default">Edit Your Details</button>
+                    <br><br><br>
+                   
+                  </div>
+
                   <!--address book-->
-                  <div class="tab-pane fade in active" id="service-one">
+                  <div class="tab-pane fade" id="service-one">
                     <br>
                     <address>
   <strong>John Doe</strong><br>
@@ -224,7 +241,29 @@
                   <!-- Order History-->
                   <div class="tab-pane fade" id="service-four">
                     <br> No Previous Orders.. :(
+                    <br><br><br>
                    
+                  </div>
+                  <!--avatar-->
+                  <div class="tab-pane fade" id="service-five">
+                    <br> You Haven't Uploaded An Avatar Yet..<br> But Not To Worry You Can Upload One Now!<br>  <button style="margin-left: 50px;" type="button" class="btn btn-default">Upload Avatar</button>
+
+                    <br><br><br>
+                    
+                  </div>
+                  <!-- wishlist-->
+                  <div class="tab-pane fade" id="service-six">
+                    <br>
+                      
+                        <img src="http://asda.scene7.com/is/image/Asda/?layer=0&size=149,186&wid=149&hei=186&layer=1&size=149,186&pos=0,0&resMode=sharp&src=is{Asda/5054240201401}&defaultimage=default_listing_GM">
+                         <img src="http://asda.scene7.com/is/image/Asda/?layer=0&size=149,186&wid=149&hei=186&layer=1&size=149,186&pos=0,0&resMode=sharp&src=is{Asda/5054065850167}&defaultimage=default_listing_GM">
+                          <img src="http://asda.scene7.com/is/image/Asda/?layer=0&size=149,186&wid=149&hei=186&layer=1&size=149,186&pos=0,0&resMode=sharp&src=is{Asda/5053516120378}&defaultimage=default_listing_GM">
+                      
+
+                    </div>
+                    <br><br><br>
+                  </div>
+
                   </div>
                 </div>
                 <hr>
@@ -235,15 +274,12 @@
           </div>
           <!-- /col-sm-6 -->
         </div>
-        <div>
-          <button type="button" class="btn btn-success">Continue Shopping</button>
-        </div>
+        
 
-            
-            
-        </div>
-        <!-- The menu -->
-        <nav id="menu">
+          <div class="container">
+
+            <!-- The menu -->
+            <nav id="menu">
                 <ul>
                     <div>
                       <a href="">asdasdasd</a>
@@ -307,6 +343,7 @@
                     <li><a href="/contact/form">My Account</a></li>
                 </ul>
             </nav>
+        </div>
     
   
     
