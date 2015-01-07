@@ -32,71 +32,95 @@
         bottom: 0;
       }
     </style>
-
     
     
     <script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
     <script type="text/javascript" src="src/js/jquery.mmenu.min.all.js"></script>
+
     <script src="js/spritespin.js"></script>
+
+
     <!-- Fire the plugin onDocumentReady -->
     <script type="text/javascript">
       $(document).ready(function() {
         $("#menu").mmenu({
           classes: "mm-light",
-           "labels": true,
-           "searchfield": {
-              "placeholder": "Search",
-              "add": true,
-              "search": true
-           }
+          "labels": true,
+          "searchfield": {
+            "placeholder": "Search",
+            "add": true,
+            "search": true
+          }
         });
         $('.spritespin').spritespin({
-                      source: SpriteSpin.sourceArray('images/avatarImg/rad_zoom_{frame}.jpg', { frame: [1,34], digits: 3 }),
-                      width: 480,
-                      height: 327,
-                      sense: -1,
-                      renderer: 'image'
-                    });
+          source: SpriteSpin.sourceArray('images/avatarImg/rad_zoom_{frame}.jpg', { frame: [1,34], digits: 3 }),
+          width: 480,
+          height: 327,
+          sense: -1,
+          renderer: 'image',
+          onLoad: function(){
+
+              var currentHeight = $('.spritespin-stage img').height();
+
+              $('.spritespin').css('height', currentHeight + 'px');
+          }
+        });
+
+
 
         $('.favoritesSlider').slick({
-  dots: true,
-  infinite: false,
-  speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
-});
+          dots: true,
+          infinite: false,
+          speed: 300,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          ]
+        });
 
 
-         $('#mydiv').share({
-        networks: ['facebook','pinterest','googleplus','twitter','email']
-      });
+        $.notify.defaults({ className: "success" });
+
+        $(".productBox").each(function(){
+
+            $(this).click(function(){
+                $(".spritespin").notify(
+                  "Item added to your Avatar", 
+                  { position:"bottom center" }
+                );
+            });
+
+         });
+
+
+        $('#mydiv').share({
+          networks: ['facebook','pinterest','googleplus','twitter','email']
+        });
 
 
 
@@ -108,7 +132,32 @@
           slide: 'div',
           cssEase: 'linear'
         });
+
+        $('.spritespin').css('width', '100%');
+        console.log("ran");
+
+        
+
+        $(window).resize(function(){
+
+            var currentHeight = $('.spritespin-stage img').height();
+
+            $('.spritespin').css('height', currentHeight + 'px');
+
+            $('#productBoxStyling').remove();
+
+            $('<style id="productBoxStyling">.productBoxLH:after {line-height: ' + $('.productBox').height() + 'px;}</style>').appendTo('head');
+          
+        });
+
+        $('<style id="productBoxStyling">.productBoxLH:after {line-height: ' + $('.productBox').height() + 'px;}</style>').appendTo('head');
+
+
+        
       });
+    
+      
+      
     </script>
   </head>
 
@@ -154,8 +203,8 @@
               <div class="row">
               <h1>FAVOURITES</h1>
               <div class="favoritesSlider">
-                    <div class="productBox">
-                        <a href="listing.html"><img class="avatarSlider" src="http://placehold.it/250x250" style="display: inline-block;"></a>
+                    <div class="productBox productBoxLH">
+                        <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/5054240946647_B?hei=382&wid=305&resmode=sharp&op_usm=1.1,0.5,0,0&defaultimage=default_details_George_rd" style="display: inline-block;">
                     </div>
                     <div>
                         <a href="listing.html"><img class="avatarSlider" src="http://placehold.it/250x250" style="display: inline-block;"></a>
@@ -314,7 +363,10 @@
     
 
 <script src="js/bootstrap.min.js"></script>
+      <script src="js/notify.min.js"></script>
+
 <script src="js/jquery.share.js"></script>
+
 <script type="text/javascript" src="slick/slick.min.js"></script>
 
   </body>

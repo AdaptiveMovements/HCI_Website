@@ -1042,7 +1042,7 @@
           w = floor(data.sourceWidth * data.scaleWidth);
           h = floor(data.sourceHeight * data.scaleHeight);
         } else {
-          w = h = '100%';
+          w  = '100%';
         }
         $(data.images).appendTo(data.stage).css({
           width: w,

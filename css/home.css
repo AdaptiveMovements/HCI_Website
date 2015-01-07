@@ -184,7 +184,6 @@ nav:not(.mm-menu)
 /* Images responsiveness*/
 img {
 	max-width: 100%;
-	height: auto;
 	margin: 0 auto;
 }
 
@@ -868,10 +867,41 @@ img {
 /* Avatar Slider */
 .avatarSlider{
   padding: 5px;
+  //height: 100%;
+  //width: 100%;
 }
- 
-.productBox:hover { 
-  opacity: 0.3; filter: alpha(opacity=30);
+
+.productBox {
+
+  position: relative;
+
+}
+
+.productBox:after { 
+  
+  content: "Add To Avatar";
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 120%;
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: #FFF;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+} 
+
+.productBox:hover:after { 
+  opacity: 0.7;
 } 
 
 @media screen and (max-width: 1100px) {
