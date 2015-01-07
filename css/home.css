@@ -879,7 +879,7 @@ img {
 
 .productBox:after { 
   
-  content: "Add To Avatar";
+  content: "Add";
 
   position: absolute;
   top: 0px;

@@ -1,177 +1,189 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    
-    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
-    <title>George Clothing</title>
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" >
-    <link type="text/css" rel="stylesheet" href="css/home.css" />
-    <link type="text/css" rel="stylesheet" href="src/css/jquery.mmenu.all.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link type="text/css" rel="stylesheet" href="fontello/css/hci_menuicos.css" />
+<head>
+  <meta charset="utf-8" />
 
-    
-    
-    
-    <!-- for the fixed header -->
-    <style type="text/css">
-      .header,
-      .footer
-      {
-        box-sizing: border-box;
-        width: 100%;
-        position: fixed;
-      }
-      .header
-      {
-        top: 0;
-      }
-      .footer
-      {
-        bottom: 0;
-      }
-    </style>
-    
-    
-    <script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
-    <script type="text/javascript" src="src/js/jquery.mmenu.min.all.js"></script>
-
-    <script src="js/spritespin.js"></script>
+  <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+  <title>George Clothing</title>
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" >
+  <link type="text/css" rel="stylesheet" href="css/home.css" />
+  <link type="text/css" rel="stylesheet" href="src/css/jquery.mmenu.all.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link type="text/css" rel="stylesheet" href="fontello/css/hci_menuicos.css" />
 
 
-    <!-- Fire the plugin onDocumentReady -->
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $("#menu").mmenu({
-          classes: "mm-light",
-          "labels": true,
-          "searchfield": {
-            "placeholder": "Search",
-            "add": true,
-            "search": true
+
+
+  <!-- for the fixed header -->
+  <style type="text/css">
+    .header,
+    .footer
+    {
+      box-sizing: border-box;
+      width: 100%;
+      position: fixed;
+    }
+    .header
+    {
+      top: 0;
+    }
+    .footer
+    {
+      bottom: 0;
+    }
+  </style>
+
+
+  <script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+  <script type="text/javascript" src="src/js/jquery.mmenu.min.all.js"></script>
+
+  <script src="js/spritespin.js"></script>
+
+
+  <!-- Fire the plugin onDocumentReady -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#menu").mmenu({
+        classes: "mm-light",
+        "labels": true,
+        "searchfield": {
+          "placeholder": "Search",
+          "add": true,
+          "search": true
+        }
+      });
+
+
+
+      $('.spritespin').spritespin({
+        source: SpriteSpin.sourceArray('images/avatarImg/rad_zoom_{frame}.jpg', { frame: [1,32], digits: 3 }),
+        width: 480,
+        height: 327,
+        frameTime: 100,
+        sense: -1,
+        renderer: 'image',
+        onLoad: function(){
+
+          var currentHeight = $('.spritespin-stage img').height();
+
+          $('.spritespin').css('height', currentHeight + 'px');
+
+          $('.spritespin').css('max-height', '400px');
+
+        }
+      });
+
+
+
+      $('.favoritesSlider').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 6,
+        slidesToScroll: 3,
+        responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
           }
-        });
-        $('.spritespin').spritespin({
-          source: SpriteSpin.sourceArray('images/avatarImg/rad_zoom_{frame}.jpg', { frame: [1,34], digits: 3 }),
-          width: 480,
-          height: 327,
-          sense: -1,
-          renderer: 'image',
-          onLoad: function(){
-
-              var currentHeight = $('.spritespin-stage img').height();
-
-              $('.spritespin').css('height', currentHeight + 'px');
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 2
           }
-        });
-
-
-
-        $('.favoritesSlider').slick({
-          dots: true,
-          infinite: false,
-          speed: 300,
-          slidesToShow: 6,
-          slidesToScroll: 3,
-          responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 5,
-              slidesToScroll: 2,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 4,
-              slidesToScroll: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1
-            }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
           }
-          ]
+        }
+        ]
+      });
+
+
+      $.notify.defaults({ className: "success" });
+
+      $(".productBox").each(function(){
+
+        $(this).click(function(){
+          $(".spritespin").notify(
+            "Item added to your Avatar", 
+            { position:"bottom center" }
+            );
         });
 
-
-        $.notify.defaults({ className: "success" });
-
-        $(".productBox").each(function(){
-
-            $(this).click(function(){
-                $(".spritespin").notify(
-                  "Item added to your Avatar", 
-                  { position:"bottom center" }
-                );
-            });
-
-         });
+      });
 
 
-        $('#mydiv').share({
-          networks: ['facebook','pinterest','googleplus','twitter','email']
-        });
+      $('#mydiv').share({
+        networks: ['facebook','pinterest','googleplus','twitter','email']
+      });
+
+
+      $('.spritespin').css('width', '100%');
+      console.log("ran");
 
 
 
-        $('.slideshow').slick({
-          dots: true,
-          infinite: true,
-          speed: 500,
-          fade: true,
-          slide: 'div',
-          cssEase: 'linear'
-        });
+      $(window).resize(function(){
 
-        $('.spritespin').css('width', '100%');
-        console.log("ran");
+        var currentHeight = $('.spritespin-stage img').height();
 
-        
+        $('.spritespin').css('height', currentHeight + 'px');
 
-        $(window).resize(function(){
-
-            var currentHeight = $('.spritespin-stage img').height();
-
-            $('.spritespin').css('height', currentHeight + 'px');
-
-            $('#productBoxStyling').remove();
-
-            $('<style id="productBoxStyling">.productBoxLH:after {line-height: ' + $('.productBox').height() + 'px;}</style>').appendTo('head');
-          
-        });
+        $('#productBoxStyling').remove();
 
         $('<style id="productBoxStyling">.productBoxLH:after {line-height: ' + $('.productBox').height() + 'px;}</style>').appendTo('head');
 
+        if(currentHeight >= 400){
 
-        
+
+            $('.spritespin img').css('height', '100%');
+            $('.spritespin img').css('width', '');
+
+        }else{
+
+            $('.spritespin img').css('width', '100%');
+            $('.spritespin img').css('height', '');
+
+        }
+
+
+
       });
-    
-      
-      
-    </script>
-  </head>
 
-  <body>
+      $('<style id="productBoxStyling">.productBoxLH:after {line-height: ' + $('.productBox').height() + 'px;}</style>').appendTo('head');
+
+
+
+    });
+
+
+
+</script>
+</head>
+
+<body>
 
   <div id="page">
-      <div class="header FixedTop">
-        <a id="mainMenu" href="#menu" class="icon-menu"></a>
-        <a id="searchIcon" href="#menu"><i class="icon-search icon-image"></i></a>
-        <a id="profileIcon" href="login.html"><i class="icon-user icon-image"></i></a>
-        <a id="basketIcon" href="#menu"><i class="icon-basket icon-image"></i></a>  
-      </div>
+    <div class="header FixedTop">
+      <a id="mainMenu" href="#menu" class="icon-menu"></a>
+      <a id="searchIcon" href="#menu"><i class="icon-search icon-image"></i></a>
+      <a id="profileIcon" href="login.html"><i class="icon-user icon-image"></i></a>
+      <a id="basketIcon" href="#menu"><i class="icon-basket icon-image"></i></a>  
+    </div>
 
-      <div class="content" id="content">
+    <div class="content" id="content">
 
 
         <!-- HEADER 
@@ -184,196 +196,214 @@
 
         <!-- CONTENT
         =================================-->
-          <div class="container">
-            <div class="row">
-            <h1>AVATAR ( Not the film )</h1>
-              <div class="col-sm-6">
-                <div class="spritespin"></div>
-                <!-- SOCIAL SHARE -->
+        <div class="container">
+          <div class="row">
+            <h1>AVATAR</h1>
+            <div class="col-sm-6">
+              <div class="spritespin"></div>
+              <!-- SOCIAL SHARE -->
 
 
               <br>
               <h1 style="text-align:center;">SHARE THE LOOK</h1>
-    <div id="mydiv" style="text-align:center;"></div>
-         
-
-          
-              </div>
-              <div class="col-sm-6">
-              <div class="row">
-              <h1>FAVOURITES</h1>
-              <div class="favoritesSlider">
-                    <div class="productBox productBoxLH">
-                        <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/5054240946647_B?hei=382&wid=305&resmode=sharp&op_usm=1.1,0.5,0,0&defaultimage=default_details_George_rd" style="display: inline-block;">
-                    </div>
-                    <div>
-                        <a href="listing.html"><img class="avatarSlider" src="http://placehold.it/250x250" style="display: inline-block;"></a>
-                    </div>
-                    <div class="productBox productBoxLH">
-                        <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/5054240946647_B?hei=382&wid=305&resmode=sharp&op_usm=1.1,0.5,0,0&defaultimage=default_details_George_rd" style="display: inline-block;">
-                    </div>
-                    <div>
-                        <a href="listing.html"><img class="avatarSlider" src="http://placehold.it/250x250" style="display: inline-block;"></a>
-                    </div>
-                    <div class="productBox productBoxLH">
-                        <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/5054240946647_B?hei=382&wid=305&resmode=sharp&op_usm=1.1,0.5,0,0&defaultimage=default_details_George_rd" style="display: inline-block;">
-                    </div>
-                    <div>
-                        <a href="listing.html"><img class="avatarSlider" src="http://placehold.it/250x250" style="display: inline-block;"></a>
-                    </div>
-                    <div>
-                        <a href="listing.html"><img class="avatarSlider" src="http://placehold.it/250x250" style="display: inline-block;"></a>
-                    </div>
-                    <div>
-                        <a href="listing.html"><img class="avatarSlider" src="http://placehold.it/250x250" style="display: inline-block;"></a>
-                    </div>
-                </div>
-              </div>
-
-
-
-<div class="row">
-              <h1>TOPS</h1>
-              <div class="favoritesSlider">
-                    <div>
-                        <a href="listing.html"><img class="avatarSlider" src="http://placehold.it/250x250" style="display: inline-block;"></a>
-                    </div>
-                    <div>
-                        <a href="listing.html"><img class="avatarSlider" src="http://placehold.it/250x250" style="display: inline-block;"></a>
-                    </div>
-                    <div>
-                        <a href="listing.html"><img class="avatarSlider" src="http://placehold.it/250x250" style="display: inline-block;"></a>
-                    </div>
-                    <div>
-                        <a href="listing.html"><img class="avatarSlider" src="http://placehold.it/250x250" style="display: inline-block;"></a>
-                    </div>
-                    <div>
-                        <a href="listing.html"><img class="avatarSlider" src="http://placehold.it/250x250" style="display: inline-block;"></a>
-                    </div>
-                    <div>
-                        <a href="listing.html"><img class="avatarSlider" src="http://placehold.it/250x250" style="display: inline-block;"></a>
-                    </div>
-                </div>
-              </div>
-              </div>
-              
-
-              </div>
+              <div id="mydiv" style="text-align:center;"></div>
 
 
 
             </div>
+            <div class="col-sm-6">
+              <div class="row">
+                <h1>FAVOURITES</h1>
+                <div class="favoritesSlider">
+                  <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054390011202}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                  <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5053516895474}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                   <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054240943738}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                  <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054240964641}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                   <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5053516895474}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                   <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054240943738}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                  <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054240964641}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div><div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5053516895474}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                   <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054240943738}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                  <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054240964641}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="row">
+                <h1>TOPS</h1>
+                <div class="favoritesSlider">
+                  <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054390333205}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                  <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054390258652}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                   <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054240943738}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                  <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054390091891}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                   <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054390538518}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                   <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054390333205}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                  <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054390258652}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                   <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054240943738}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                  <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054390091891}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                   <div class="productBox productBoxLH">
+                    <img class="avatarSlider" src="http://asda.scene7.com/is/image/Asda/?layer=0&size=180,239&wid=180&hei=239&layer=1&resMode=sharp&src=is{Asda/5054390538518}&size=180,239&defaultimage=default_listing_George_rd" style="display: inline-block;">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
           </div>
 
 
 
-
+        </div>
       </div>
-            
 
 
 
 
-          
+    </div>
 
-       <nav id="menu">
-              <!--****** PROFILE  *******-->
-              <ul>
-                <li>
-                  <div class="mm-nopanel panel-body">
-                    <div class="media">
-                      <a class="pull-left" href="#">
-                      <img class="media-object img-circle" src="https://lh3.googleusercontent.com/-veNtxGy3nJk/AAAAAAAAAAI/AAAAAAAAAKQ/-EvbQZfuocM/s120-c/photo.jpg">
-                      </a>
-                      <div class="media-body">
-                        <h2 class="media-heading">Username</h2>
-                        username@email.com
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="Buttonbar mm-nopanel">
-                    <input id="btn-1" name="btns" type="radio" />
-                    <label for="btn-1">Women</label>
-                    <input id="btn-2" name="btns" type="radio" />
-                    <label for="btn-2">Men</label>
-                    <input id="btn-3" name="btns" type="radio" />
-                    <label for="btn-3">Kids</label>
-                  </div>
-                </li>
-                <li><a href="index.html">Homepage</a></li>
-                <li class="Label">Shop</li>
-                <li>
-                  <a href="listing.html">Shop By Product</a>
-                  <ul>
-                    <li><a href="listing.html">Accesories</a></li>
-                    <li><a href="listing.html">Jeans</a></li>
-                    <li><a href="listing.html">Tops</a></li>
-                    <li><a href="listing.html">Lingerie</a></li>
-                    <li><a href="listing.html">Maternity</a></li>
-                    <li><a href="listing.html">Skirts</a></li>
-                    <li><a href="listing.html">Dresses</a></li>
-                    <li><a href="listing.html">Jumpers</a></li>
-                    <li><a href="listing.html">Footwear</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="listing.html">Special Offers</a>
-                  <ul>
-                    <li><a href="listing.html">Mix & Match Lingerie</a></li>
-                    <li><a href="listing.html">Mix & Match Socks</a></li>
-                    <li><a href="listing.html">Mix & Match Nightwear</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="listing.html">Collections</a>
-                  <ul>
-                    <li><a href="listing.html">Nightwear</a></li>
-                    <li><a href="listing.html">Fancy Dress</a></li>
-                    <li><a href="listing.html">Thermal</a></li>
-                    <li><a href="listing.html">Winter</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="listing.html">Christmas</a>
-                  <ul>
-                    <li><a href="listing.html">Christmas Jumpers</a></li>
-                    <li><a href="listing.html">Novelty</a></li>
-                    <li><a href="listing.html">Party</a></li>
-                  </ul>
-                </li>
-                <li class="Label">More Information</li>
-                <li><a href="">Size Guide</a></li>
-                <li><a href="">My orders</a></li>
-                <li><a href="https://asda.custhelp.com/">Contact Us</a></li>
-                <li><a href="">Delivery Options</a></li>
-                <li><a href="">Store Finder</a></li>
-                <li class="Label">Settings</li>
-                <li><a href="#">App Settings</a></li>
-                <li><a href="#">My Account</a></li>
-              </ul>
-            </nav>
-      <div class="newsletter">
-        <form class="" action="http://cl.s6.exct.net/subscribe.aspx?lid=13667" id="subscribeForm" name="subscribeForm" method="post">
-          <span style="word-wrap: break-word;">The latest info about the newest releases &amp; much more</span> <br>
-          <input class="newsletter-input exposer" name="Email Address" value="" type="text">
-          <input class="newsletter-submit" value="Subscribe" type="submit">
-          <input name="thx" value="" type="hidden">
-          <input name="err" value="" type="hidden">
-          <input name="usub" value="" type="hidden">
-          <input name="MID" value="" type="hidden">
-          <input name="ETSubscriberKey" value="SZ_" style="display:none" type="text">
-        </form>   
-      </div>
+
+
+
+
+
+
+    <nav id="menu">
+      <!--****** PROFILE  *******-->
+      <ul>
+        <li>
+          <div class="mm-nopanel panel-body">
+            <div class="media">
+              <a class="pull-left" href="#">
+                <img class="media-object img-circle" src="https://lh3.googleusercontent.com/-veNtxGy3nJk/AAAAAAAAAAI/AAAAAAAAAKQ/-EvbQZfuocM/s120-c/photo.jpg">
+              </a>
+              <div class="media-body">
+                <h2 class="media-heading">Username</h2>
+                username@email.com
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="Buttonbar mm-nopanel">
+            <input id="btn-1" name="btns" type="radio" />
+            <label for="btn-1">Women</label>
+            <input id="btn-2" name="btns" type="radio" />
+            <label for="btn-2">Men</label>
+            <input id="btn-3" name="btns" type="radio" />
+            <label for="btn-3">Kids</label>
+          </div>
+        </li>
+        <li><a href="index.html">Homepage</a></li>
+        <li class="Label">Shop</li>
+        <li>
+          <a href="listing.html">Shop By Product</a>
+          <ul>
+            <li><a href="listing.html">Accesories</a></li>
+            <li><a href="listing.html">Jeans</a></li>
+            <li><a href="listing.html">Tops</a></li>
+            <li><a href="listing.html">Lingerie</a></li>
+            <li><a href="listing.html">Maternity</a></li>
+            <li><a href="listing.html">Skirts</a></li>
+            <li><a href="listing.html">Dresses</a></li>
+            <li><a href="listing.html">Jumpers</a></li>
+            <li><a href="listing.html">Footwear</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="listing.html">Special Offers</a>
+          <ul>
+            <li><a href="listing.html">Mix & Match Lingerie</a></li>
+            <li><a href="listing.html">Mix & Match Socks</a></li>
+            <li><a href="listing.html">Mix & Match Nightwear</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="listing.html">Collections</a>
+          <ul>
+            <li><a href="listing.html">Nightwear</a></li>
+            <li><a href="listing.html">Fancy Dress</a></li>
+            <li><a href="listing.html">Thermal</a></li>
+            <li><a href="listing.html">Winter</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="listing.html">Christmas</a>
+          <ul>
+            <li><a href="listing.html">Christmas Jumpers</a></li>
+            <li><a href="listing.html">Novelty</a></li>
+            <li><a href="listing.html">Party</a></li>
+          </ul>
+        </li>
+        <li class="Label">More Information</li>
+        <li><a href="">Size Guide</a></li>
+        <li><a href="">My orders</a></li>
+        <li><a href="https://asda.custhelp.com/">Contact Us</a></li>
+        <li><a href="">Delivery Options</a></li>
+        <li><a href="">Store Finder</a></li>
+        <li class="Label">Settings</li>
+        <li><a href="#">App Settings</a></li>
+        <li><a href="#">My Account</a></li>
+      </ul>
+    </nav>
+    <div class="newsletter">
+      <form class="" action="http://cl.s6.exct.net/subscribe.aspx?lid=13667" id="subscribeForm" name="subscribeForm" method="post">
+        <span style="word-wrap: break-word;">The latest info about the newest releases &amp; much more</span> <br>
+        <input class="newsletter-input exposer" name="Email Address" value="" type="text">
+        <input class="newsletter-submit" value="Subscribe" type="submit">
+        <input name="thx" value="" type="hidden">
+        <input name="err" value="" type="hidden">
+        <input name="usub" value="" type="hidden">
+        <input name="MID" value="" type="hidden">
+        <input name="ETSubscriberKey" value="SZ_" style="display:none" type="text">
+      </form>   
+    </div>
     
 
-<script src="js/bootstrap.min.js"></script>
-      <script src="js/notify.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/notify.min.js"></script>
 
-<script src="js/jquery.share.js"></script>
+    <script src="js/jquery.share.js"></script>
 
-<script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 
   </body>
-</html>
+  </html>

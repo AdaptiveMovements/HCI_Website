@@ -13,6 +13,7 @@
     <link type="text/css" rel="stylesheet" href="src/css/jquery.mmenu.all.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link type="text/css" rel="stylesheet" href="fontello/css/hci_menuicos.css" />
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     
     
@@ -88,37 +89,169 @@
 
 
         <div class="row">
-          <div class="col-md-6 col-xs-12" style="border-right: 3px solid #000;padding-right:0px; ">
+          <div class="col-md-12 col-xs-12 col-sm-12" style="border-right: 3px solid #000;padding-right:0px; ">
             <h1 class="text-center" style="margin-top:80px; font-size: 40px">Delivery Options</h1>
-            <br>
-            <ul class="list-group">
-              <a href="#" class="list-group-item">UK Standard</a>
-              <a href="#" class="list-group-item">UK Next Day</a>
-              <a href="#" class="list-group-item">UK Sunday</a>
-              <a href="#"class="list-group-item">UK Next Day Evening</a>
-              <a href="#" class="list-group-item">Collect From Store</a>
-              <a href="#" class="list-group-item">International Delivery</a>
-              <a href="#" class="list-group-item">International Tracked Express</a>
+            <h5 class="text-center" style="margin-top:20px; font: 400 1em/1.38 FontAwesome;">Delivery detail for items despatched directly from the manufacturer can be found on the product listing.
+<br><br>
+Unfortunately, at this time we cannot deliver to the Channel Islands, Isle of Man or British Forces posted overseas.
+<br><br>
+PLEASE NOTE Our carrier deliveries are made between the hours of 7am and 7pm.</h5>
 
-            </ul>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="margin-top:20px">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          UK Standard:
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+       Within 3-5 working days of your order being placed - £2.99 or FREE delivery on orders over £100
+       <br> - Applies to George and selected ASDA Direct Small/Medium products.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          UK Next Day :
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+       Order before 9pm weekdays and 2pm Sundays to receive the following day – £4.99 or FREE delivery on orders over £150. <br> - Applies to George and selected ASDA Direct Small/Medium products.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          UK Sunday:
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Order before 2pm on Saturday to receive the following day. <br> - Applies to George and selected ASDA Direct Small/Medium products.
+      </div>
+    </div>
+  </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingfour">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+         UK Next Day Evening:
+        </a>
+      </h4>
+    </div>
+    <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
+      <div class="panel-body">
+       Order until midnight for delivery the next day between 6pm and 10pm - £9.99. Place your order between midnight and 1am for same day delivery between 6pm and 10pm. <br> - Applies to George and selected ASDA Direct Small/Medium products.
+      </div>
+    </div>
+  </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingfive">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+          Collect From Store:
+        </a>
+      </h4>
+    </div>
+    <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
+      <div class="panel-body">
+       Delivered to a UK store usually within 5 working days for FREE. <br> - Applies to George and selected ASDA Direct Small/Medium products.
+      </div>
+    </div>
+  </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingsix">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+          International Delivery:
+        </a>
+      </h4>
+    </div>
+    <div id="collapsesix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingsix">
+      <div class="panel-body">
+       Available to 197 destinations. Delivered within 10 working days - £4.99. <br> - Applies to George and selected ASDA Direct Small/Medium products.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingsev">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapsesev" aria-expanded="false" aria-controls="collapsesev">
+          International Tracked Express:
+        </a>
+      </h4>
+    </div>
+    <div id="collapsesev" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingsev">
+      <div class="panel-body">
+       Within 5 working days - From £8.00, depending on location. <br> - Applies to George and selected ASDA Direct Small/Medium products.
+      </div>
+    </div>
+  </div>
+</div>
+            
           </div>
+
+     
+
+<!--
           <div class="col-md-6">
             
             <h1 class="text-center" style="margin-top:80px; font-size: 40px;">Delivery Information</h1>
-          <div class="container-fluid">
-            <div class="uk">
+            <div id="standard" class="uk" style="display:none">
               <h2 class="text-left">UK Standard</h2>
               <p>Within 3-5 working days of your order being placed - £2.99 or FREE delivery on orders over £100.</p>
-
-          </div>
+             
+            </div>
+        
 
           
-        </div>
+      
+        <div class="uk"  style="display:none">
+              <h2 class="text-left">UK Next Day</h2>
+              <p>Order before 9pm weekdays and 2pm Sundays to receive the following day – £4.99 or FREE delivery on orders over £150.</p>
+            </div>
 
-        </div>
+        <div class="uk" style="display:none">
+              <h2 class="text-left">UK Sunday</h2>
+              <p>Order before 2pm on Saturday to receive the following day.</p>
+            </div>
 
+        <div class="uk" style="display:none">
+              <h2 class="text-left">UK Next Day Evening</h2>
+              <p>Order until midnight for delivery the next day between 6pm and 10pm - £9.99. Place your order between midnight and 1am for same day delivery between 6pm and 10pm.</p>
+            </div>
 
+        <div class="uk" style="display:none">
+              <h2 class="text-left">Collect From Store</h2>
+              <p> Delivered to a UK size? store usually within 5 working days for FREE.</p>
+            </div>
 
+        <div class="uk" style="display:none">
+              <h2 class="text-left">International Delivery</h2>
+              <p> Available to 197 destinations. Delivered within 10 working days - £4.99.</p>
+            </div>
+
+        <div class="uk" style="display:none">
+              <h2 class="text-left">International Tracked Express</h2>
+              <p> Within 5 working days - From £8.00, depending on location. </p>
+            </div>
+
+</div> -->
             <!-- The menu -->
             <nav id="menu">
                 <ul>
@@ -202,6 +335,7 @@
 
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
+
 
   </body>
 </html>
