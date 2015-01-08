@@ -88,26 +88,31 @@
         <a id="profileIcon" href="login.html"><i class="icon-user icon-image"></i></a>
         <a id="basketIcon" href="#menu"><i class="icon-basket icon-image"></i></a>  
       </div>
-
+<div class="newsletter" style="padding-top:80px;">
+      <form class="" action="http://cl.s6.exct.net/subscribe.aspx?lid=13667" id="subscribeForm" name="subscribeForm" method="post">
+        <span style="word-wrap: break-word;">Order before 6pm today, for Sunday delivery - £4.99</span> <br>
+      </form>
+    </div>
       <div class="row">
-        <h1 style="margin-top: 100px;margin-left: 20px; font-size: 60px; font: 400 4.725em/1.38 FontAwesome;">My Account</h1>
+        <h1 class="text-center " style="margin-top: 60px; font-size: 60px; font: 400 4.725em/1.38 FontAwesome;">My Account</h1>
         <div>
-        <h2 style="margin-left: 20px; font: 400 2em/1.38 FontAwesome;">Hello John! <br> Welcome To Your Account <button style="margin-left: 50px;" type="button" class="btn btn-success">Continue Shopping</button></h2>
-        
-        
-          
-        </div
-
+        <h2 class="text-center" style=" font: 400 2em/1.38 FontAwesome;">Hello John! <br> Welcome To Your Account </h2>
+       
+        </div>
+        <div class="text-center">
+        <a  href="index.html"  type="button" class="btn btn-success">Continue Shopping</a>
+      </div>
 <div class="container-fluid">
-              <div class="col-md-12" style="margin-top: 40px; margin-left:10px;">
+  <div class="col-md-3" style="display:hidden"></div>
+              <div class="col-md-7" style="margin-top: 40px; margin-left:10px;">
                 <ul id="myTab" class="nav nav-tabs nav_tabs">
-                  <li class="active"><a href="#service-zero" data-toggle="tab">Overview</a></li>
-                  <li><a href="#service-one" data-toggle="tab">Adress Book</a></li>
-                  <li><a href="#service-two" data-toggle="tab">Wallet</a></li>
-                  <li><a href="#service-three" data-toggle="tab">Settings</a></li>
-                  <li><a href="#service-four" data-toggle="tab">Order History</a></li>
-                  <li><a href="#service-five" data-toggle="tab">Avatar</a></li>
-                  <li><a href="#service-six" data-toggle="tab">Your Wishlist</a></li>
+                  <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;" class="active"><a href="#service-zero" data-toggle="tab">Overview</a></li>
+                  <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-one" data-toggle="tab">Adress Book</a></li>
+                  <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-two" data-toggle="tab">Wallet</a></li>
+                  <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-three" data-toggle="tab">Settings</a></li>
+                  <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-four" data-toggle="tab">Order History</a></li>
+                  <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-five" data-toggle="tab">Avatar</a></li>
+                  <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-six" data-toggle="tab">Your Wishlist</a></li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
 
@@ -150,6 +155,7 @@
                   </div>
                   <!-- Settings-->
                   <div class="tab-pane fade" id="service-three">
+                   
 
                     Currency
                     <div class="btn-group" style="margin-left: 142px;">
@@ -203,6 +209,99 @@
                     </script>
 <br><br>
 
+                     Top Size
+                    <div class="btn-group" style="margin-left:147px">
+                      <button id="top" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        4 <span class="caret"></span>
+                      </button>
+                      <ul id="dropdownthree" class="dropdown-menu" role="menu">
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">10</a></li>
+                        <li><a href="#">12</a></li>
+                         <li><a href="#">14</a></li>
+                        <li><a href="#">16</a></li>
+                        <li><a href="#">18</a></li>
+                        <li><a href="#">20</a></li>
+                      </ul>
+                    </div>
+                    <script type="text/javascript">
+                      $(function(){
+  
+                    $("#dropdownthree li").click(function(){
+                      
+                      $("#top").text($(this).text());
+                       
+                      });
+
+                    });
+                    </script>
+<br><br>
+                  Bottom Size
+                    <div class="btn-group" style="margin-left:127px">
+                      <button id="bottom" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        XS <span class="caret"></span>
+                      </button>
+                      <ul id="dropdownfour" class="dropdown-menu" role="menu">
+                        <li><a href="#">S</a></li>
+                        <li><a href="#">M</a></li>
+                        <li><a href="#">L</a></li>
+                        <li><a href="#">XL</a></li>
+                        <li><a href="#">XXL</a></li>
+                        <li><a href="#">8 Short</a></li>
+                        <li><a href="#">10 Short</a></li>
+                        <li><a href="#">12 Short</a></li>
+                        <li><a href="#">14 Short</a></li>
+                        <li><a href="#">16 Short</a></li>
+                        <li><a href="#">18 Short</a></li>
+                        <li><a href="#">8 Regular</a></li>
+                        <li><a href="#">10 Regular</a></li>
+                        <li><a href="#">12 Regular</a></li>
+                        <li><a href="#">14 Regular</a></li>
+                        <li><a href="#">16 Regular</a></li>
+                      </ul>
+                    </div>
+                    <script type="text/javascript">
+                      $(function(){
+  
+                    $("#dropdownfour li").click(function(){
+                      
+                      $("#bottom").text($(this).text());
+                       
+                      });
+
+                    });
+                    </script>
+<br><br>
+                  Shoe size
+                    <div class="btn-group" style="margin-left:141px">
+                      <button id="shoe" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        3 <span class="caret"></span>
+                      </button>
+                      <ul id="dropdownfive" class="dropdown-menu" role="menu">
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">6.5</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                       
+                      </ul>
+                    </div>
+                    <script type="text/javascript">
+                      $(function(){
+  
+                    $("#dropdownfive li").click(function(){
+                      
+                      $("#shoe").text($(this).text());
+                       
+                      });
+
+                    });
+                    </script>
+<br><br>
+
                     Connect to Facebook
                     <div class="btn-group" data-toggle="buttons" style="margin-left: 68px">
                       <label class="btn btn-default btn-sm active" style="margin-right:0px;" >
@@ -235,8 +334,8 @@
                       <label class="btn btn-primary btn-sm">
                           <input type="radio" name="options"> OFF
                       </label>
-                  </div>
-
+                  
+                </div>
                 </div>
                   <!-- Order History-->
                   <div class="tab-pane fade" id="service-four">
