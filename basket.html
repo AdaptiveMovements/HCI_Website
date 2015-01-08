@@ -47,11 +47,6 @@
       $(document).ready(function() {
         $("#menu").mmenu({
           classes: "mm-light",
-           "header": {
-              "title": "PROFILE",
-              "add": true,
-              "update": true,
-           },
            "labels": true,
            "searchfield": {
               "placeholder": "Search",
@@ -60,17 +55,6 @@
            }
         });
 
-
-
-
-        $('.slideshow').slick({
-          dots: true,
-          infinite: true,
-          speed: 500,
-          fade: true,
-          slide: 'div',
-          cssEase: 'linear'
-        });
       });
     </script>
   </head>
@@ -86,13 +70,6 @@
       </div>
 
       <div class="content" id="content">
-
-
-        <!-- HEADER 
-        =================================-->
-
-        <!-- /header container-->
-
 
         <!-- CONTENT
         =================================-->
@@ -119,15 +96,15 @@
                         <div class="media">
                             <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://media.monsoon.co.uk/medias/sys_master/9004439306270.jpg?buildNumber=4782" style="width: 72px; height: 72px;"> </a>
                             <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                <h4 class="media-heading"><a href="#">Bowler Bag</a></h4>
                                 <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
                             </div>
                         </div></td>
                         <td class="col-sm-1 col-md-1" style="text-align: center">
                         <input type="email" class="form-control" id="exampleInputEmail1" value="3">
                         </td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>£4.87</strong></td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>£14.61</strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>£9.99</strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>£29.97</strong></td>
                         <td class="col-sm-1 col-md-1">
                         <button type="button" class="btn btn-danger">
                             <span class="glyphicon glyphicon-remove"></span> Remove
@@ -138,15 +115,15 @@
                         <div class="media">
                             <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://images.asos-media.com/inv/media/4/7/4/7/4657474/image3xl.jpg" style="width: 72px; height: 72px;"> </a>
                             <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                <h4 class="media-heading"><a href="#">Velvet Bardot Dress</a></h4>
                                 <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 weeks</strong></span>
                             </div>
                         </div></td>
                         <td class="col-md-1" style="text-align: center">
                         <input type="email" class="form-control" id="exampleInputEmail1" value="2">
                         </td>
-                        <td class="col-md-1 text-center"><strong>£4.99</strong></td>
-                        <td class="col-md-1 text-center"><strong>£9.98</strong></td>
+                        <td class="col-md-1 text-center"><strong>£18.00</strong></td>
+                        <td class="col-md-1 text-center"><strong>£36.00</strong></td>
                         <td class="col-md-1">
                         <button type="button" class="btn btn-danger">
                             <span class="glyphicon glyphicon-remove"></span> Remove
@@ -157,21 +134,21 @@
                         <td>   </td>
                         <td>   </td>
                         <td><h5>Subtotal</h5></td>
-                        <td class="text-right"><h5><strong>£24.59</strong></h5></td>
+                        <td class="text-right"><h5><strong>£69.97</strong></h5></td>
                     </tr>
                     <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
                         <td><h5>Estimated shipping</h5></td>
-                        <td class="text-right"><h5><strong>£6.94</strong></h5></td>
+                        <td class="text-right"><h5><strong>£4.99</strong></h5></td>
                     </tr>
                     <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
                         <td><h3>Total</h3></td>
-                        <td class="text-right"><h3><strong>£31.53</strong></h3></td>
+                        <td class="text-right"><h3><strong>£70.96</strong></h3></td>
                     </tr>
                     <tr>
                         <td>   </td>
@@ -195,70 +172,83 @@
       </div>
 
       <!-- The menu -->
-      <nav id="menu">
-                <ul>
-                    <div>
-                      <a href="">asdasdasd</a>
+        <nav id="menu">
+          <!--****** PROFILE  *******-->
+          <ul>
+            <li>
+                      <div class="mm-nopanel panel-body">
+                        <div class="media">
+                          <a class="pull-left" href="avatar.html">
+                              <img class="media-object img-circle" src="https://lh3.googleusercontent.com/-veNtxGy3nJk/AAAAAAAAAAI/AAAAAAAAAKQ/-EvbQZfuocM/s120-c/photo.jpg">
+                          </a>
+                          <div class="media-body">
+                            <h2 class="media-heading">Username</h2>
+                            username@email.com
+                        </div>
                     </div>
-                    <li>
-                       <div class="Buttonbar mm-nopanel">
-                          <input id="btn-1" name="btns" type="radio" />
-                          <label for="btn-1">Women</label>
-                          <input id="btn-2" name="btns" type="radio" />
-                          <label for="btn-2">Men</label>
-                          <input id="btn-3" name="btns" type="radio" />
-                          <label for="btn-3">Kids</label>
-                       </div>
-                    </li>
-                    <li><a href="">Homepage</a></li>
-                    <li class="Label">Shop</li>
-                    <li><a href="/about">Shop By Product</a>
-                       <ul>
-                          <li><a href="">Accesories</a></li>
-                          <li><a href="">Jeans</a></li>
-                          <li><a href="">Tops</a></li>
-                          <li><a href="">Lingerie</a></li>
-                          <li><a href="">Maternity</a></li>
-                          <li><a href="">Skirts</a></li>
-                          <li><a href="">Dresses</a></li>
-                          <li><a href="">Jumpers</a></li>
-                          <li><a href="">Footwear</a></li>
-                       </ul>
-                    </li>
-                    <li><a href="/about">Special Offers</a>
-                       <ul>
-                          <li><a href="">Mix & Match Lingerie</a></li>
-                          <li><a href="">Mix & Match Socks</a></li>
-                          <li><a href="">Mix & Match Nightwear</a></li>
-                       </ul>
-                    </li>
-                    <li><a href="/about">Collections</a>
-                       <ul>
-                          <li><a href="">Nightwear</a></li>
-                          <li><a href="">Fancy Dress</a></li>
-                          <li><a href="">Thermal</a></li>
-                          <li><a href="">Winter</a></li>
-                       </ul>
-                    </li>
-                    <li><a href="/about">Christmas</a>
-                       <ul>
-                          <li><a href="">Christmas Jumpers</a></li>
-                          <li><a href="">Novelty</a></li>
-                          <li><a href="">Party</a></li>
-                       </ul>
-                    </li>
-                    <li class="Label">More Information</li>
-                    <li><a href="">FAQs</a></li>
-                    <li><a href="">Size Guide</a></li>
-                    <li><a href="">My orders</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Delivery Options</a></li>
-                    <li><a href="">Store Finder</a></li>
-                    <li class="Label">Settings</li>
-                    <li><a href="/contact/address">App Settings</a></li>
-                    <li><a href="/contact/form">My Account</a></li>
-                </ul>
-      </nav>
+                </div>
+            </li>
+            <li>
+              <div class="Buttonbar mm-nopanel">
+                <input id="btn-1" name="btns" type="radio" />
+                <label for="btn-1">Women</label>
+                <input id="btn-2" name="btns" type="radio" />
+                <label for="btn-2">Men</label>
+                <input id="btn-3" name="btns" type="radio" />
+                <label for="btn-3">Kids</label>
+            </div>
+            </li>
+            <li><a href="index.html">Homepage</a></li>
+            <li class="Label">Shop</li>
+            <li>
+              <a href="#mm-1">Shop By Product</a>
+              <ul>
+                <li><a href="listing.html">Accesories</a></li>
+                <li><a href="listing.html">Jeans</a></li>
+                <li><a href="listing.html">Tops</a></li>
+                <li><a href="listing.html">Lingerie</a></li>
+                <li><a href="listing.html">Maternity</a></li>
+                <li><a href="listing.html">Skirts</a></li>
+                <li><a href="listing.html">Dresses</a></li>
+                <li><a href="listing.html">Jumpers</a></li>
+                <li><a href="listing.html">Footwear</a></li>
+            </ul>
+            </li>
+            <li>
+              <a href="#mm-2">Special Offers</a>
+              <ul>
+                <li><a href="listing.html">Mix & Match Lingerie</a></li>
+                <li><a href="listing.html">Mix & Match Socks</a></li>
+                <li><a href="listing.html">Mix & Match Nightwear</a></li>
+            </ul>
+            </li>
+            <li>
+              <a href="#mm-3">Collections</a>
+              <ul>
+                <li><a href="listing.html">Nightwear</a></li>
+                <li><a href="listing.html">Fancy Dress</a></li>
+                <li><a href="listing.html">Thermal</a></li>
+                <li><a href="listing.html">Winter</a></li>
+            </ul>
+            </li>
+            <li>
+              <a href="#mm-4">Christmas</a>
+              <ul>
+                <li><a href="listing.html">Christmas Jumpers</a></li>
+                <li><a href="listing.html">Novelty</a></li>
+                <li><a href="listing.html">Party</a></li>
+            </ul>
+            </li>
+            <li class="Label">More Information</li>
+            <li><a href="http://direct.asda.com/george/GRG_SIZEGUIDE_PORTAL,default,pg.html">Size Guide</a></li>
+            <li><a href="https://asda.custhelp.com/">Contact Us</a></li>
+            <li><a href="delivery.html">Delivery Options</a></li>
+            <li><a href="">Store Finder</a></li>
+            <li class="Label">Settings</li>
+            <li><a href="account.html">My Account</a></li>
+            </ul>
+        </nav><!-- The menu -->
+
       <div class="newsletter">
         <form class="" action="http://cl.s6.exct.net/subscribe.aspx?lid=13667" id="subscribeForm" name="subscribeForm" method="post">
           <span style="word-wrap: break-word;">The latest info about the newest releases &amp; much more</span> <br>

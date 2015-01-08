@@ -1,451 +1,458 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    
-    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
 
-    <title>George Clothing</title>
+  <title>George Clothing</title>
 
-    <link type="text/css" rel="stylesheet" href="css/home.css" />
-    <link type="text/css" rel="stylesheet" href="src/css/jquery.mmenu.all.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link type="text/css" rel="stylesheet" href="fontello/css/hci_menuicos.css" />
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-   
-
-
-
-    
-    
-    
-    <!-- for the fixed header -->
-    <style type="text/css">
-      .header,
-      .footer
-      {
-        box-sizing: border-box;
-        width: 100%;
-        position: fixed;
-      }
-      .header
-      {
-        top: 0;
-      }
-      .footer
-      {
-        bottom: 0;
-      }
-    </style>
-
-
-    <script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
-    <script type="text/javascript" src="src/js/jquery.mmenu.min.all.js"></script>
-    <!-- Fire the plugin onDocumentReady -->
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $("#menu").mmenu({
-          classes: "mm-light",
-           "header": {
-              "title": "PROFILE",
-              "add": true,
-              "update": true,
-           },
-           "labels": true,
-           "searchfield": {
-              "placeholder": "Search",
-              "add": true,
-              "search": true
-           }
-        });
+  <link type="text/css" rel="stylesheet" href="css/home.css" />
+  <link type="text/css" rel="stylesheet" href="src/css/jquery.mmenu.all.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link type="text/css" rel="stylesheet" href="fontello/css/hci_menuicos.css" />
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
 
 
-        $('.slideshow').slick({
-          dots: true,
-          infinite: true,
-          speed: 500,
-          fade: true,
-          slide: 'div',
-          cssEase: 'linear'
-        });
+
+
+
+  <!-- for the fixed header -->
+  <style type="text/css">
+    .header,
+    .footer
+    {
+      box-sizing: border-box;
+      width: 100%;
+      position: fixed;
+    }
+    .header
+    {
+      top: 0;
+    }
+    .footer
+    {
+      bottom: 0;
+    }
+  </style>
+
+
+  <script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+  <script type="text/javascript" src="src/js/jquery.mmenu.min.all.js"></script>
+  <!-- Fire the plugin onDocumentReady -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#menu").mmenu({
+        classes: "mm-light",
+        "labels": true,
+        "searchfield": {
+          "placeholder": "Search",
+          "add": true,
+          "search": true
+        }
       });
-    </script>
-    <script src="js/bootstrap-switch.js"></script>
-  </head>
 
-  <body>
+
+
+
+      $('.slideshow').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        slide: 'div',
+        cssEase: 'linear'
+      });
+    });
+  </script>
+  <script src="js/bootstrap-switch.js"></script>
+</head>
+
+<body>
 
   <div id="page">
-      <div class="header FixedTop">
-        <a id="mainMenu" href="#menu" class="icon-menu"></a>
-        <a id="searchIcon" href="#menu"><i class="icon-search icon-image"></i></a>
-        <a id="profileIcon" href="login.html"><i class="icon-user icon-image"></i></a>
-        <a id="basketIcon" href="#menu"><i class="icon-basket icon-image"></i></a>  
-      </div>
-<div class="newsletter" style="padding-top:80px;">
+    <div class="header FixedTop">
+              <a id="mainMenu" href="#menu" class="icon-menu"></a>
+              <a id="searchIcon" href="#menu"><i class="icon-search icon-image"></i></a>
+              <a id="profileIcon" href="login.html"><i class="icon-user icon-image"></i></a>
+              <a id="basketIcon" href="basket.html"><i class="icon-basket icon-image"></i></a>  
+    </div>
+    <div class="newsletter" style="padding-top:80px;">
       <form class="" action="http://cl.s6.exct.net/subscribe.aspx?lid=13667" id="subscribeForm" name="subscribeForm" method="post">
         <span style="word-wrap: break-word;">Order before 6pm today, for Sunday delivery - £4.99</span> <br>
       </form>
     </div>
-      <div class="row">
-        <h1 class="text-center " style="margin-top: 60px; font-size: 60px; font: 400 4.725em/1.38 FontAwesome;">My Account</h1>
-        <div>
+    <div class="row">
+      <h1 class="text-center " style="margin-top: 60px; font-size: 60px; font: 400 4.725em/1.38 FontAwesome;">My Account</h1>
+      <div>
         <h2 class="text-center" style=" font: 400 2em/1.38 FontAwesome;">Hello John! <br> Welcome To Your Account </h2>
-       
-        </div>
-        <div class="text-center">
+
+      </div>
+      <div class="text-center">
         <a  href="index.html"  type="button" class="btn btn-success">Continue Shopping</a>
       </div>
-<div class="container-fluid">
-  <div class="col-md-3" style="display:hidden"></div>
-              <div class="col-md-7" style="margin-top: 40px; margin-left:10px;">
-                <ul id="myTab" class="nav nav-tabs nav_tabs">
-                  <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;" class="active"><a href="#service-zero" data-toggle="tab">Overview</a></li>
-                  <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-one" data-toggle="tab">Adress Book</a></li>
-                  <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-two" data-toggle="tab">Wallet</a></li>
-                  <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-three" data-toggle="tab">Settings</a></li>
-                  <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-four" data-toggle="tab">Order History</a></li>
-                  <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-five" data-toggle="tab">Avatar</a></li>
-                  <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-six" data-toggle="tab">Your Wishlist</a></li>
-                </ul>
-                <div id="myTabContent" class="tab-content">
+      <div class="container-fluid">
+        <div class="col-md-3" style="display:hidden"></div>
+        <div class="col-md-7" style="margin-top: 40px; margin-left:10px;">
+          <ul id="myTab" class="nav nav-tabs nav_tabs">
+            <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;" class="active"><a href="#service-zero" data-toggle="tab">Overview</a></li>
+            <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-one" data-toggle="tab">Address Book</a></li>
+            <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-two" data-toggle="tab">Wallet</a></li>
+            <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-three" data-toggle="tab">Settings</a></li>
+            <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-four" data-toggle="tab">Order History</a></li>
+            <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-five" data-toggle="tab">Avatar</a></li>
+            <li style="border: 1px solid #000; border-radius: 4px 4px 0 0;"><a href="#service-six" data-toggle="tab">Your Wishlist</a></li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
 
-                  <!-- Account Overview-->
-                  <div class="tab-pane fade in active" id="service-zero"> <!-- slightly bad practice??? haha :\-->
-                    <br> Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;John Doe
-                    <br><br>
-                    Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Johndoe@gmail.com
-                    <br><br>
-                    <button type="button" class="btn btn-default">Edit Your Details</button>
-                    <br><br><br>
-                   
-                  </div>
+            <!-- Account Overview-->
+            <div class="tab-pane fade in active" id="service-zero"> <!-- slightly bad practice??? haha :\-->
+              <br> Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;John Doe
+              <br><br>
+              Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Johndoe@gmail.com
+              <br><br>
+              <button type="button" class="btn btn-default">Edit Your Details</button>
+              <br><br><br>
 
-                  <!--address book-->
-                  <div class="tab-pane fade" id="service-one">
-                    <br>
-                    <address>
-  <strong>John Doe</strong><br>
-  795 Folsom Ave, Suite 600<br>
-  San Francisco, CA 94107<br>
-  <abbr title="Phone">P:</abbr> (123) 456-7890<br>
-
-
-</address>
-              
-                  </div>
-                  <!-- wallet-->
-                  <div class="tab-pane fade" id="service-two">
-                    <br>
-                    <div class="card" style="background-color:#DDD; width: 300px; height: 60px;">
-                      <br>
-                    <label style="margin-left:5px;"><input type="radio" name="male" checked> <img src="images/visa-logo-37x12.gif"> xxxx xxxx xxxx 9040   Mr John Doe</label>
-                  </div>
-                   <br>
-                    <div class="card" style="background-color:#DDD; width: 300px; height: 60px;">
-                      <br>
-                    <label style="margin-left:5px;"><input type="radio" name="male" > <img src="images/mastercard.gif"> xxxx xxxx xxxx 4543   Mr John Doe</label>
-                  </div>
-                  </div>
-                  <!-- Settings-->
-                  <div class="tab-pane fade" id="service-three">
-                   
-
-                    Currency
-                    <div class="btn-group" style="margin-left: 142px;">
-                      <button id="currency" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        £ GBP <span class="caret"></span>
-                      </button>
-                      <ul id="dropdownone" class="dropdown-menu" role="menu">
-                        
-                        <li><a href="#">$ AUD</a></li>
-                        <li><a href="#">€ EUR</a></li>
-                        <li><a href="#">£ GBP</a></li>
-                        <li><a href="#">$ USD</a></li>
-                      </ul>
-                    </div>
-                    <script type="text/javascript">
-                      $(function(){
-  
-                    $("#dropdownone li").click(function(){
-                      
-                      $("#currency").text($(this).text());
-                       
-                      });
-
-                    });
-                    </script>
-
-
-<br><br>
-                  Sizes
-                    <div class="btn-group" style="margin-left:166px">
-                      <button id="sizes" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        UK <span class="caret"></span>
-                      </button>
-                      <ul id="dropdowntwo" class="dropdown-menu" role="menu">
-                        <li><a href="#">AU</a></li>
-                        <li><a href="#">EU</a></li>
-                        <li><a href="#">UK</a></li>
-                        <li><a href="#">US</a></li>
-                      </ul>
-                    </div>
-                    <script type="text/javascript">
-                      $(function(){
-  
-                    $("#dropdowntwo li").click(function(){
-                      
-                      $("#sizes").text($(this).text());
-                       
-                      });
-
-                    });
-                    </script>
-<br><br>
-
-                     Top Size
-                    <div class="btn-group" style="margin-left:147px">
-                      <button id="top" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        4 <span class="caret"></span>
-                      </button>
-                      <ul id="dropdownthree" class="dropdown-menu" role="menu">
-                        <li><a href="#">6</a></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">10</a></li>
-                        <li><a href="#">12</a></li>
-                         <li><a href="#">14</a></li>
-                        <li><a href="#">16</a></li>
-                        <li><a href="#">18</a></li>
-                        <li><a href="#">20</a></li>
-                      </ul>
-                    </div>
-                    <script type="text/javascript">
-                      $(function(){
-  
-                    $("#dropdownthree li").click(function(){
-                      
-                      $("#top").text($(this).text());
-                       
-                      });
-
-                    });
-                    </script>
-<br><br>
-                  Bottom Size
-                    <div class="btn-group" style="margin-left:127px">
-                      <button id="bottom" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        XS <span class="caret"></span>
-                      </button>
-                      <ul id="dropdownfour" class="dropdown-menu" role="menu">
-                        <li><a href="#">S</a></li>
-                        <li><a href="#">M</a></li>
-                        <li><a href="#">L</a></li>
-                        <li><a href="#">XL</a></li>
-                        <li><a href="#">XXL</a></li>
-                        <li><a href="#">8 Short</a></li>
-                        <li><a href="#">10 Short</a></li>
-                        <li><a href="#">12 Short</a></li>
-                        <li><a href="#">14 Short</a></li>
-                        <li><a href="#">16 Short</a></li>
-                        <li><a href="#">18 Short</a></li>
-                        <li><a href="#">8 Regular</a></li>
-                        <li><a href="#">10 Regular</a></li>
-                        <li><a href="#">12 Regular</a></li>
-                        <li><a href="#">14 Regular</a></li>
-                        <li><a href="#">16 Regular</a></li>
-                      </ul>
-                    </div>
-                    <script type="text/javascript">
-                      $(function(){
-  
-                    $("#dropdownfour li").click(function(){
-                      
-                      $("#bottom").text($(this).text());
-                       
-                      });
-
-                    });
-                    </script>
-<br><br>
-                  Shoe size
-                    <div class="btn-group" style="margin-left:141px">
-                      <button id="shoe" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        3 <span class="caret"></span>
-                      </button>
-                      <ul id="dropdownfive" class="dropdown-menu" role="menu">
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">6</a></li>
-                        <li><a href="#">6.5</a></li>
-                        <li><a href="#">7</a></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">9</a></li>
-                       
-                      </ul>
-                    </div>
-                    <script type="text/javascript">
-                      $(function(){
-  
-                    $("#dropdownfive li").click(function(){
-                      
-                      $("#shoe").text($(this).text());
-                       
-                      });
-
-                    });
-                    </script>
-<br><br>
-
-                    Connect to Facebook
-                    <div class="btn-group" data-toggle="buttons" style="margin-left: 68px">
-                      <label class="btn btn-default btn-sm active" style="margin-right:0px;" >
-                          <input type="radio" name="options" > ON
-                      </label>
-                      <label class="btn btn-primary btn-sm">
-                          <input type="radio" name="options"> OFF
-                      </label>
-
-           
-                  </div>
-                  <br><br>
-                       Connect to Google
-                      <div class="btn-group" data-toggle="buttons" style="margin-left: 83px">
-                      <label class="btn btn-default btn-sm active" style="margin-right:0px;" >
-                          <input type="radio" name="options" > ON
-                      </label>
-                      <label class="btn btn-primary btn-sm">
-                          <input type="radio" name="options"> OFF
-                      </label>
-                  </div>
-
-                  <br><br>
-
-                  Receive Promotional Emails
-                      <div class="btn-group" data-toggle="buttons" style="margin-left: 25px">
-                      <label class="btn btn-default btn-sm active" style="margin-right:0px;" >
-                          <input type="radio" name="options" > ON
-                      </label>
-                      <label class="btn btn-primary btn-sm">
-                          <input type="radio" name="options"> OFF
-                      </label>
-                  
-                </div>
-                </div>
-                  <!-- Order History-->
-                  <div class="tab-pane fade" id="service-four">
-                    <br> No Previous Orders.. :(
-                    <br><br><br>
-                   
-                  </div>
-                  <!--avatar-->
-                  <div class="tab-pane fade" id="service-five">
-                    <br> You Haven't Uploaded An Avatar Yet..<br> But Not To Worry You Can Upload One Now!<br>  <button style="margin-left: 50px;" type="button" class="btn btn-default">Upload Avatar</button>
-
-                    <br><br><br>
-                    
-                  </div>
-                  <!-- wishlist-->
-                  <div class="tab-pane fade" id="service-six">
-                    <br>
-                      
-                        <img src="http://asda.scene7.com/is/image/Asda/?layer=0&size=149,186&wid=149&hei=186&layer=1&size=149,186&pos=0,0&resMode=sharp&src=is{Asda/5054240201401}&defaultimage=default_listing_GM">
-                         <img src="http://asda.scene7.com/is/image/Asda/?layer=0&size=149,186&wid=149&hei=186&layer=1&size=149,186&pos=0,0&resMode=sharp&src=is{Asda/5054065850167}&defaultimage=default_listing_GM">
-                          <img src="http://asda.scene7.com/is/image/Asda/?layer=0&size=149,186&wid=149&hei=186&layer=1&size=149,186&pos=0,0&resMode=sharp&src=is{Asda/5053516120378}&defaultimage=default_listing_GM">
-                      
-
-                    </div>
-                    <br><br><br>
-                  </div>
-
-                  </div>
-                </div>
-                <hr>
-              </div>
-              <!-- /col-md-12 -->
             </div>
-            <!-- /container-fluid -->
-          </div>
-          <!-- /col-sm-6 -->
-        </div>
-        
 
-          <div class="container">
+            <!--address book-->
+            <div class="tab-pane fade" id="service-one">
+              <br>
+              <address>
+                <strong>John Doe</strong><br>
+                795 Folsom Ave, Suite 600<br>
+                San Francisco, CA 94107<br>
+                <abbr title="Phone">P:</abbr> (123) 456-7890<br>
 
-            <!-- The menu -->
-            <nav id="menu">
-                <ul>
-                    <div>
-                      <a href="">asdasdasd</a>
-                    </div>
-                    <li>
-                       <div class="Buttonbar mm-nopanel">
-                          <input id="btn-1" name="btns" type="radio" />
-                          <label for="btn-1">Women</label>
-                          <input id="btn-2" name="btns" type="radio" />
-                          <label for="btn-2">Men</label>
-                          <input id="btn-3" name="btns" type="radio" />
-                          <label for="btn-3">Kids</label>
-                       </div>
-                    </li>
-                    <li><a href="">Homepage</a></li>
-                    <li class="Label">Shop</li>
-                    <li><a href="/about">Shop By Product</a>
-                       <ul>
-                          <li><a href="">Accesories</a></li>
-                          <li><a href="">Jeans</a></li>
-                          <li><a href="">Tops</a></li>
-                          <li><a href="">Lingerie</a></li>
-                          <li><a href="">Maternity</a></li>
-                          <li><a href="">Skirts</a></li>
-                          <li><a href="">Dresses</a></li>
-                          <li><a href="">Jumpers</a></li>
-                          <li><a href="">Footwear</a></li>
-                       </ul>
-                    </li>
-                    <li><a href="/about">Special Offers</a>
-                       <ul>
-                          <li><a href="">Mix & Match Lingerie</a></li>
-                          <li><a href="">Mix & Match Socks</a></li>
-                          <li><a href="">Mix & Match Nightwear</a></li>
-                       </ul>
-                    </li>
-                    <li><a href="/about">Collections</a>
-                       <ul>
-                          <li><a href="">Nightwear</a></li>
-                          <li><a href="">Fancy Dress</a></li>
-                          <li><a href="">Thermal</a></li>
-                          <li><a href="">Winter</a></li>
-                       </ul>
-                    </li>
-                    <li><a href="/about">Christmas</a>
-                       <ul>
-                          <li><a href="">Christmas Jumpers</a></li>
-                          <li><a href="">Novelty</a></li>
-                          <li><a href="">Party</a></li>
-                       </ul>
-                    </li>
-                    <li class="Label">More Information</li>
-                    <li><a href="">FAQs</a></li>
-                    <li><a href="">Size Guide</a></li>
-                    <li><a href="">My orders</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Delivery Options</a></li>
-                    <li><a href="">Store Finder</a></li>
-                    <li class="Label">Settings</li>
-                    <li><a href="/contact/address">App Settings</a></li>
-                    <li><a href="/contact/form">My Account</a></li>
+
+              </address>
+              
+            </div>
+            <!-- wallet-->
+            <div class="tab-pane fade" id="service-two">
+              <br>
+              <div class="card" style="background-color:#DDD; width: 300px; height: 60px;">
+                <br>
+                <label style="margin-left:5px;"><input type="radio" name="male" checked> <img src="images/visa-logo-37x12.gif"> xxxx xxxx xxxx 9040   Mr John Doe</label>
+              </div>
+              <br>
+              <div class="card" style="background-color:#DDD; width: 300px; height: 60px;">
+                <br>
+                <label style="margin-left:5px;"><input type="radio" name="male" > <img src="images/mastercard.gif"> xxxx xxxx xxxx 4543   Mr John Doe</label>
+              </div>
+            </div>
+            <!-- Settings-->
+            <div class="tab-pane fade" id="service-three">
+
+
+              Currency
+              <div class="btn-group" style="margin-left: 142px;">
+                <button id="currency" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  £ GBP <span class="caret"></span>
+                </button>
+                <ul id="dropdownone" class="dropdown-menu" role="menu">
+
+                  <li><a href="#">$ AUD</a></li>
+                  <li><a href="#">€ EUR</a></li>
+                  <li><a href="#">£ GBP</a></li>
+                  <li><a href="#">$ USD</a></li>
                 </ul>
-            </nav>
+              </div>
+              <script type="text/javascript">
+                $(function(){
+
+                  $("#dropdownone li").click(function(){
+
+                    $("#currency").text($(this).text());
+
+                  });
+
+                });
+              </script>
+
+
+              <br><br>
+              Sizes
+              <div class="btn-group" style="margin-left:166px">
+                <button id="sizes" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  UK <span class="caret"></span>
+                </button>
+                <ul id="dropdowntwo" class="dropdown-menu" role="menu">
+                  <li><a href="#">AU</a></li>
+                  <li><a href="#">EU</a></li>
+                  <li><a href="#">UK</a></li>
+                  <li><a href="#">US</a></li>
+                </ul>
+              </div>
+              <script type="text/javascript">
+                $(function(){
+
+                  $("#dropdowntwo li").click(function(){
+
+                    $("#sizes").text($(this).text());
+
+                  });
+
+                });
+              </script>
+              <br><br>
+
+              Top Size
+              <div class="btn-group" style="margin-left:147px">
+                <button id="top" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  4 <span class="caret"></span>
+                </button>
+                <ul id="dropdownthree" class="dropdown-menu" role="menu">
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">8</a></li>
+                  <li><a href="#">10</a></li>
+                  <li><a href="#">12</a></li>
+                  <li><a href="#">14</a></li>
+                  <li><a href="#">16</a></li>
+                  <li><a href="#">18</a></li>
+                  <li><a href="#">20</a></li>
+                </ul>
+              </div>
+              <script type="text/javascript">
+                $(function(){
+
+                  $("#dropdownthree li").click(function(){
+
+                    $("#top").text($(this).text());
+
+                  });
+
+                });
+              </script>
+              <br><br>
+              Bottom Size
+              <div class="btn-group" style="margin-left:127px">
+                <button id="bottom" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  XS <span class="caret"></span>
+                </button>
+                <ul id="dropdownfour" class="dropdown-menu" role="menu">
+                  <li><a href="#">S</a></li>
+                  <li><a href="#">M</a></li>
+                  <li><a href="#">L</a></li>
+                  <li><a href="#">XL</a></li>
+                  <li><a href="#">XXL</a></li>
+                  <li><a href="#">8 Short</a></li>
+                  <li><a href="#">10 Short</a></li>
+                  <li><a href="#">12 Short</a></li>
+                  <li><a href="#">14 Short</a></li>
+                  <li><a href="#">16 Short</a></li>
+                  <li><a href="#">18 Short</a></li>
+                  <li><a href="#">8 Regular</a></li>
+                  <li><a href="#">10 Regular</a></li>
+                  <li><a href="#">12 Regular</a></li>
+                  <li><a href="#">14 Regular</a></li>
+                  <li><a href="#">16 Regular</a></li>
+                </ul>
+              </div>
+              <script type="text/javascript">
+                $(function(){
+
+                  $("#dropdownfour li").click(function(){
+
+                    $("#bottom").text($(this).text());
+
+                  });
+
+                });
+              </script>
+              <br><br>
+              Shoe size
+              <div class="btn-group" style="margin-left:141px">
+                <button id="shoe" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  3 <span class="caret"></span>
+                </button>
+                <ul id="dropdownfive" class="dropdown-menu" role="menu">
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">6.5</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">8</a></li>
+                  <li><a href="#">9</a></li>
+
+                </ul>
+              </div>
+              <script type="text/javascript">
+                $(function(){
+
+                  $("#dropdownfive li").click(function(){
+
+                    $("#shoe").text($(this).text());
+
+                  });
+
+                });
+              </script>
+              <br><br>
+
+              Connect to Facebook
+              <div class="btn-group" data-toggle="buttons" style="margin-left: 68px">
+                <label class="btn btn-default btn-sm active" style="margin-right:0px;" >
+                  <input type="radio" name="options" > ON
+                </label>
+                <label class="btn btn-primary btn-sm">
+                  <input type="radio" name="options"> OFF
+                </label>
+
+
+              </div>
+              <br><br>
+              Connect to Google
+              <div class="btn-group" data-toggle="buttons" style="margin-left: 83px">
+                <label class="btn btn-default btn-sm active" style="margin-right:0px;" >
+                  <input type="radio" name="options" > ON
+                </label>
+                <label class="btn btn-primary btn-sm">
+                  <input type="radio" name="options"> OFF
+                </label>
+              </div>
+
+              <br><br>
+
+              Receive Promotional Emails
+              <div class="btn-group" data-toggle="buttons" style="margin-left: 25px">
+                <label class="btn btn-default btn-sm active" style="margin-right:0px;" >
+                  <input type="radio" name="options" > ON
+                </label>
+                <label class="btn btn-primary btn-sm">
+                  <input type="radio" name="options"> OFF
+                </label>
+
+              </div>
+            </div>
+            <!-- Order History-->
+            <div class="tab-pane fade" id="service-four">
+              <br> No Previous Orders.. :(
+              <br><br><br>
+
+            </div>
+            <!--avatar-->
+            <div class="tab-pane fade" id="service-five">
+              <br> You Haven't Uploaded An Avatar Yet..<br> But Not To Worry You Can Upload One Now!<br>  <a href="avatar.html"><button style="margin-left: 50px;" type="button" class="btn btn-default">Upload Avatar</button></a>
+
+              <br><br><br>
+
+            </div>
+            <!-- wishlist-->
+            <div class="tab-pane fade" id="service-six">
+              <br>
+
+              <img src="http://asda.scene7.com/is/image/Asda/?layer=0&size=149,186&wid=149&hei=186&layer=1&size=149,186&pos=0,0&resMode=sharp&src=is{Asda/5054240201401}&defaultimage=default_listing_GM">
+              <img src="http://asda.scene7.com/is/image/Asda/?layer=0&size=149,186&wid=149&hei=186&layer=1&size=149,186&pos=0,0&resMode=sharp&src=is{Asda/5054065850167}&defaultimage=default_listing_GM">
+              <img src="http://asda.scene7.com/is/image/Asda/?layer=0&size=149,186&wid=149&hei=186&layer=1&size=149,186&pos=0,0&resMode=sharp&src=is{Asda/5053516120378}&defaultimage=default_listing_GM">
+
+
+            </div>
+            <br><br><br>
+          </div>
+
         </div>
-    
-  
-    
+      </div>
+      <hr>
+    </div>
+    <!-- /col-md-12 -->
+  </div>
+  <!-- /container-fluid -->
+</div>
+<!-- /col-sm-6 -->
+</div>
+
+
+<div class="container">
+
+
+</div>
+<!-- The menu -->
+<nav id="menu">
+  <!--****** PROFILE  *******-->
+  <ul>
+    <li>
+      <div class="mm-nopanel panel-body">
+        <div class="media">
+          <a class="pull-left" href="avatar.html">
+            <img class="media-object img-circle" src="https://lh3.googleusercontent.com/-veNtxGy3nJk/AAAAAAAAAAI/AAAAAAAAAKQ/-EvbQZfuocM/s120-c/photo.jpg">
+          </a>
+          <div class="media-body">
+            <h2 class="media-heading">Username</h2>
+            username@email.com
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="Buttonbar mm-nopanel">
+        <input id="btn-1" name="btns" type="radio" />
+        <label for="btn-1">Women</label>
+        <input id="btn-2" name="btns" type="radio" />
+        <label for="btn-2">Men</label>
+        <input id="btn-3" name="btns" type="radio" />
+        <label for="btn-3">Kids</label>
+      </div>
+    </li>
+    <li><a href="index.html">Homepage</a></li>
+    <li class="Label">Shop</li>
+    <li>
+      <a href="#mm-1">Shop By Product</a>
+      <ul>
+        <li><a href="listing.html">Accesories</a></li>
+        <li><a href="listing.html">Jeans</a></li>
+        <li><a href="listing.html">Tops</a></li>
+        <li><a href="listing.html">Lingerie</a></li>
+        <li><a href="listing.html">Maternity</a></li>
+        <li><a href="listing.html">Skirts</a></li>
+        <li><a href="listing.html">Dresses</a></li>
+        <li><a href="listing.html">Jumpers</a></li>
+        <li><a href="listing.html">Footwear</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#mm-2">Special Offers</a>
+      <ul>
+        <li><a href="listing.html">Mix & Match Lingerie</a></li>
+        <li><a href="listing.html">Mix & Match Socks</a></li>
+        <li><a href="listing.html">Mix & Match Nightwear</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#mm-3">Collections</a>
+      <ul>
+        <li><a href="listing.html">Nightwear</a></li>
+        <li><a href="listing.html">Fancy Dress</a></li>
+        <li><a href="listing.html">Thermal</a></li>
+        <li><a href="listing.html">Winter</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#mm-4">Christmas</a>
+      <ul>
+        <li><a href="listing.html">Christmas Jumpers</a></li>
+        <li><a href="listing.html">Novelty</a></li>
+        <li><a href="listing.html">Party</a></li>
+      </ul>
+    </li>
+    <li class="Label">More Information</li>
+    <li><a href="http://direct.asda.com/george/GRG_SIZEGUIDE_PORTAL,default,pg.html">Size Guide</a></li>
+    <li><a href="https://asda.custhelp.com/">Contact Us</a></li>
+    <li><a href="delivery.html">Delivery Options</a></li>
+    <li><a href="">Store Finder</a></li>
+    <li class="Label">Settings</li>
+    <li><a href="account.html">My Account</a></li>
+  </ul>
+</nav><!-- The menu -->
+
+
 
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
@@ -453,5 +460,5 @@
 
 
 
-  </body>
+</body>
 </html>
