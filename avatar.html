@@ -58,10 +58,10 @@
 
 
       $('.spritespin').spritespin({
-        source: SpriteSpin.sourceArray('images/avatarImg/rad_zoom_{frame}.jpg', { frame: [1,32], digits: 3 }),
+        source: SpriteSpin.sourceArray('images/avatarPics/profile{frame}.jpg', { frame: [1,18], digits: 3 }),
         width: 480,
         height: 327,
-        frameTime: 100,
+        frameTime: 200,
         sense: -1,
         renderer: 'image',
         onLoad: function(){
@@ -150,11 +150,18 @@
 
             $('.spritespin img').css('height', '100%');
             $('.spritespin img').css('width', '');
+            $('.spritespin img').css('display', 'block');
+            $('.spritespin img').css('margin-left', 'auto');
+            $('.spritespin img').css('margin-right', 'auto');
+
 
         }else{
 
             $('.spritespin img').css('width', '100%');
             $('.spritespin img').css('height', '');
+            $('.spritespin img').css('display', 'block');
+            $('.spritespin img').css('margin-left', 'auto');
+            $('.spritespin img').css('margin-right', 'auto');
 
         }
 
@@ -202,13 +209,15 @@
             <div class="col-sm-6">
               <div class="spritespin"></div>
               <!-- SOCIAL SHARE -->
-                                <button type="button" style="width:100px;margin:0 auto;display:block;" class="btn btn-warning btn-cons"><span class="glyphicon glyphicon glyphicon-edit"></span>Edit Avatar</button>
+                                <button type="button" style="width:100px;margin:5px; auto;display:block;" class="btn btn-warning btn-cons"><span class="glyphicon glyphicon glyphicon-edit"></span>Edit Avatar</button>
 
 
 
               <br>
 
               <h1 style="text-align:center;">SHARE THE LOOK</h1>
+
+              
               <div id="mydiv" style="text-align:center;"></div>
 
 
