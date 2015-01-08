@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+    <title>George Clothing</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" >
+    <link type="text/css" rel="stylesheet" href="css/home.css" />
+    <link type="text/css" rel="stylesheet" href="fontello/css/hci_menuicos.css" />
+    <link type="text/css" rel="stylesheet" href="src/css/jquery.mmenu.all.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+    <!-- for the fixed header -->
+    <style type="text/css">
+      .header,
+      .footer
+      {
+      box-sizing: border-box;
+      width: 100%;
+      position: fixed;
+      }
+      .header
+      {
+      top: 0;
+      }
+      .footer
+      {
+      bottom: 0;
+      }
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+    <script type="text/javascript" src="src/js/jquery.mmenu.min.all.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/star.js"></script>
+
+    <script type="text/javascript" src="js/notification.js"></script>
+    <script src="js/productScript.js"></script>
+    <script src="js/jquery.share.js"></script>
+    <!-- Fire the plugin onDocumentReady -->
+    <script type="text/javascript">
+
+
+      $(document).ready(function() {
+        
+        $("#menu").mmenu({
+          classes: "mm-light",
+           "labels": true,
+           "searchfield": {
+              "placeholder": "Search",
+              "add": true,
+              "search": true
+           }
+        });
+
+      
+      
+         $('#mydiv').share({
+        networks: ['facebook','pinterest','googleplus','twitter','email']
+      });
+      
+        $('.selectpicker').selectpicker({
+        style: 'btn-info',
+        size: 4
+        });
+      
+      
+      
+        (function($){
+          $('#thumbcarousel').carousel(0);
+          var $thumbItems = $('#thumbcarousel .item');
+            $('#carousel').on('slide.bs.carousel', function (event) {
+             var $slide = $(event.relatedTarget);
+             var thumbIndex = $slide.data('thumb');
+             var curThumbIndex = $thumbItems.index($thumbItems.filter('.active').get(0));
+            if (curThumbIndex>thumbIndex) {
+              $('#thumbcarousel').one('slid.bs.carousel', function (event) {
+                $('#thumbcarousel').carousel(thumbIndex);
+              });
+              if (curThumbIndex === ($thumbItems.length-1)) {
+                $('#thumbcarousel').carousel('next');
+              } else {
+                $('#thumbcarousel').carousel(numThumbItems-1);
+              }
+            } else {
+              $('#thumbcarousel').carousel(thumbIndex);
+            }
+          });
+        })(jQuery);
+      
+      });
+      
+      
+    </script>
+
+  </head>
+  <body>
+    <div id="page">
+    <!-- ===== HEADER ========= -->
+    <div class="header FixedTop">
+      <a id="mainMenu" href="#menu" class="icon-menu"></a>
+      <a id="searchIcon" href="#menu"><i class="icon-search icon-image"></i></a>
+      <a id="profileIcon" href="login.html"><i class="icon-user icon-image"></i></a>
+      <a id="basketIcon" href="basket.html"><i class="icon-basket icon-image"></i></a>  
+    </div>
+    <div class="newsletter" style="padding-top:80px;">
+      <form class="" action="http://cl.s6.exct.net/subscribe.aspx?lid=13667" id="subscribeForm" name="subscribeForm" method="post">
+        <span style="word-wrap: break-word;">Order before 6pm today, for Sunday delivery - £4.99</span> <br>
+      </form>
+    </div>
+    <!-- ===== CONTENT ========= -->
+    <div class="content" id="content" style="padding-top:0px;">
+    <div class="breadcrumbs" id="breadCrumbTrail" data-component-name="breadcrumb"> 
+         <a class="home" href="index.html">Home</a>
+         <a class="home" href="listing.html">Dresses</a>
+         <a class="current" id="featured">Product</a> 
+    </div>
+     <a   href="instore.html"  type="button" class="btn btn-default text-center">Scan Anothe Item</a>
+      <div class="container">
+        <!-- ===== ROW 1 ========= -->
+        <div class="row">
+          <div class="col-sm-6">
+            <!-- =====  PRODUCT MAIN PICTURE ========= -->
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="item active" data-thumb="0">
+                  <img src="http://images.asos-media.com/inv/media/4/7/4/7/4657474/image4xl.jpg">
+                </div>
+                <div class="item" data-thumb="0">
+                  <img src="http://images.asos-media.com/inv/media/4/7/4/7/4657474/black/image1xl.jpg">
+                </div>
+                <div class="item" data-thumb="0">
+                  <img src="http://images.asos-media.com/inv/media/4/7/4/7/4657474/image3xl.jpg">
+                </div>
+                <div class="item" data-thumb="0">
+                  <img src="http://images.asos-media.com/inv/media/4/7/4/7/4657474/image4xl.jpg">
+                </div>
+                <div class="item" data-thumb="1">
+                  <img src="http://images.asos-media.com/inv/media/4/7/4/7/4657474/image4xl.jpg">
+                </div>
+                <div class="item" data-thumb="1">
+                  <img src="http://images.asos-media.com/inv/media/4/7/4/7/4657474/black/image1xl.jpg">
+                </div>
+                <div class="item" data-thumb="1">
+                  <img src="http://asda.scene7.com/is/image/Asda/5054240946647_B?hei=382&amp;wid=305&amp;resmode=sharp&amp;op_usm=1.1,0.5,0,0&amp;defaultimage=default_details_George_rd">
+                </div>
+                <div class="item" data-thumb="1">
+                  <img src="http://asda.scene7.com/is/image/Asda/5054240946647_A?hei=382&amp;wid=305&amp;resmode=sharp&amp;op_usm=1.1,0.5,0,0&amp;defaultimage=default_details_George_rd">
+                </div>
+              </div>
+              <!-- /carousel-inner -->
+            </div>
+            <!-- /carousel -->
+            <!-- =====  PRODUCT CAROUSEL ========= -->
+            <div class="clearfix">
+              <div id="thumbcarousel" class="carousel slide" data-interval="false">
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <div data-target="#carousel" data-slide-to="0" class="thumb">
+                      <img class="slider2" src="http://images.asos-media.com/inv/media/4/7/4/7/4657474/image4xl.jpg">
+                    </div>
+                    <div data-target="#carousel" data-slide-to="1" class="thumb">
+                      <img src="http://images.asos-media.com/inv/media/4/7/4/7/4657474/black/image1xl.jpg">
+                    </div>
+                    <div data-target="#carousel" data-slide-to="2" class="thumb">
+                      <img class="slider2" src="http://images.asos-media.com/inv/media/4/7/4/7/4657474/image3xl.jpg">
+                    </div>
+                    <div data-target="#carousel" data-slide-to="3" class="thumb">
+                      <img src="http://images.asos-media.com/inv/media/4/7/4/7/4657474/image4xl.jpg">
+                    </div>
+                  </div>
+                  <!-- /item -->
+                  <div class="item">
+                    <div data-target="#carousel" data-slide-to="4" class="thumb">
+                      <img class="slider2" src="http://images.asos-media.com/inv/media/4/7/4/7/4657474/image4xl.jpg">
+                    </div>
+                    <div data-target="#carousel" data-slide-to="5" class="thumb">
+                      <img src="http://images.asos-media.com/inv/media/4/7/4/7/4657474/black/image1xl.jpg">
+                    </div>
+                    <div data-target="#carousel" data-slide-to="6" class="thumb">
+                      <img src="http://asda.scene7.com/is/image/Asda/5054240946647_B?hei=382&amp;wid=305&amp;resmode=sharp&amp;op_usm=1.1,0.5,0,0&amp;defaultimage=default_details_George_rd">
+                    </div>
+                    <div data-target="#carousel" data-slide-to="7" class="thumb">
+                      <img src="http://asda.scene7.com/is/image/Asda/5054240946647_A?hei=382&amp;wid=305&amp;resmode=sharp&amp;op_usm=1.1,0.5,0,0&amp;defaultimage=default_details_George_rd">
+                    </div>
+                  </div>
+                  <!-- /item -->
+                </div>
+                <!-- /carousel-inner -->
+                <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+              </div>
+              <!-- /thumbcarousel -->
+     
+
+              <!-- SOCIAL SHARE -->
+
+
+              <br>
+              <h1 style="text-align:center;">SHARE THIS PRODUCT</h1>
+    <div id="mydiv" style="text-align:center;"></div>
+         
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <!-- /clearfix -->
+          </div>
+          <!-- /col-sm-6 -->
+          <div class="col-sm-6">
+
+          
+    
+            <h3>Velvet Bardot Dress </h3>
+            Hover and click on a star
+
+        <div id="stars" class="starrr"></div>
+        You gave a rating of <span id="count">0</span> star(s) 
+
+
+            <h2> £18.00 </h2>
+            
+            <h4>Select colour, size and quantity:</h4>
+            <div class="row-fluid">
+              <div class="dropdown">
+                <label>Colour:&nbsp;&nbsp;&nbsp;</label>
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="width:150px">
+                Colour
+                <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Black</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">White</a></li>
+                </ul>
+              </div>
+              <br>
+              <div class="dropdown">
+                <label>Size:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="width:150px">
+                Size
+                <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">S</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">M</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">L</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">XL</a></li>
+                </ul>
+              </div>
+              <br>
+              <div class="dropdown">
+                <label>Quantity:</label>
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="width:150px">
+                Quantity
+                <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#"></a></li>
+                </ul>
+              </div>
+              <br>
+            </div>
+            <br>
+            <div class="btn-group cart">
+              <button class="btn btn-success btn-block btn-add"><span class="glyphicon glyphicon-shopping-cart"></span> <span class="">Add to Basket</span></button>
+                  <button class="btn btn-danger btn-block btndetails2"><span class="glyphicon glyphicon-heart"></span><span class=""> Add to Favorites</span></button>
+            </div>
+            
+            <hr>
+            <div class="container-fluid">
+              <div class="col-md-12 product-info">
+                <ul id="myTab" class="nav nav-tabs nav_tabs">
+                  <li class="active"><a href="#service-one" data-toggle="tab">PRODUCT INFO</a></li>
+                  <li><a href="#service-two" data-toggle="tab">DELIVERY</a></li>
+                  <li><a href="#service-three" data-toggle="tab">RETURNS</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                  <div class="tab-pane fade in active" id="service-one">
+                    <section class="container product-info col-sm-12">
+                      <p>Elegant and flattering, this sensational velvet Bardot dress is a fabulous addition to your wardrobe. The perfect pick for the festive season, this figure-friendly piece will ensure you’re radiating confidence at all occasions. </p>
+                      <p>
+                      <ul>
+                        <li>Crisp fabric</li>
+                        <li>V-neckline</li>
+                        <li>Cut out detail</li>
+                        <li>Wrap back, zip fastening</li>
+                        <li>Close cut bodycon fit</li>
+                        <li>Machine wash</li>
+                        <li><span style="line-height: 14.3000001907349px;">71% Viscose, 25% Nylon, 4% Elastane</span></li>
+                      </ul>
+                      </p>
+                    </section>
+                  </div>
+                  <div class="tab-pane fade" id="service-two">
+                    <section class="container col-sm-12">
+                      <div style="display: block;" class="tab-content" id="content-2">
+                        <!-- needed -->
+                        <p>
+                          <b>UK Standard:</b> Within 3-5 working days of your order being placed - £2.99 or FREE delivery on orders over £100.<br>
+                          <b>UK Next day:</b> Order before 9pm weekdays and 2pm Sundays to receive the following day – £4.99 or FREE delivery on orders over £150.<br>
+                          <b>UK Sunday:</b> Order before 2pm on Saturday to receive the following day.<br>
+                          <b>UK Next Day Evening:</b> Order until midnight for delivery the next day between 6pm and 10pm - £9.99. Place your order between midnight and 1am for same day delivery between 6pm and 10pm.<br>
+                          <b>Collect From Store:</b> Delivered to a UK GEORGE store usually within 3 working days for FREE.<br>
+                          <b>International Delivery:</b> Available to 197 destinations. Delivered within 10 working days - £4.99. <br>
+                          <b>International Tracked Express:</b> Within 5 working days - From £8.00, depending on location. <br>
+                        </p>
+                      </div>
+                    </section>
+                  </div>
+                  <div class="tab-pane fade" id="service-three">
+                    <section class="container col-sm-12">
+                      <div style="display: block;" class="tab-content" id="content-3">
+                        <p><b>Returns for UK</b></p>
+                        <p>If for any reason you are not satisfied with your George Clothing or
+                          George Home product, simply return it within 100 days with proof of
+                          purchase for an exchange or refund. George branded products only.
+                          Excludes watches, jewellery, hair accessories, part assembled flat pack
+                          furniture and mattresses. Your statutory rights are not affected.
+                          UK Mainland stores only. Excludes franchises.
+                        </p>
+                        <br>
+                        <br>
+                        <p class="deliveryCharges"><a class="smoothbox" href="http://direct.asda.com/on/demandware.store/Sites-ASDA-Site/default/Page-Include?cid=M093_RETURNS_INFO&amp;sketch&amp;height=400&amp;width=750">See our full returns information &gt;</a></p>
+                        <br>
+                        <b>Returns for Outside of the UK</b><br>
+                        Simply: <br>
+                        <ol>
+                          <li>Download and print the International Returns form by clicking the link <u><a href="http://demandware.edgesuite.net/aacd_prd/on/demandware.static/Sites-ASDA-Site/Sites-ASDA-Library/default/v1351079697433/INT_RETURNS_FORM.pdf">International Returns Form</a></u>.</li>
+                          <li>Repack the item along with the completed returns form</li>
+                          <li>Send back to: Asda Direct, PO Box 9564, Newark, NG24 9GF, United Kingdom</li>
+                        </ol>
+                        <br>
+                        <p>We recommend you use a postal service that insures your contents and gives you proof of postage.</p>
+                        <br>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                <hr>
+              </div>
+              <!-- /col-md-12 -->
+            </div>
+            <!-- /container-fluid -->
+          </div>
+          <!-- /col-sm-6 -->
+        </div>
+        <!-- /row -->
+        <hr>
+        <!-- ===== ROW 2 ========= -->
+        <div class="row">
+          <div class="container-fluid">
+            <div class="col-md-12 product-info">
+              <ul id="myTab" class="nav nav-tabs nav_tabs">
+                <li class="active"><a href="#service-one2" data-toggle="tab">MATCH WITH</a></li>
+                <li><a href="#service-two2" data-toggle="tab">RECOMMENDS</a></li>
+                <li><a href="#service-three2" data-toggle="tab">RECENTLY VIEWED</a></li>
+              </ul>
+              <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="service-one2">
+                  <section class="container product-info">
+                    <div class="slideshowRecommend">
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/9008525541406.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/8989501882398.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/8970517741598.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/9004439306270.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/9008889135134.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/9008967712798.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/8975387459614.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/9008889528350.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div></div>
+                    </div>
+                  </section>
+                </div>
+                <div class="tab-pane fade out active" id="service-two2">
+                  <section class="container product-info">
+                    <div class="slideshowRecommend">
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/9008525541406.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/9004439306270.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/9008889135134.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/9008967712798.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/8970517741598.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/8975387459614.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/9008889528350.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/8989501882398.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <!--
+                <div class="tab-pane fade" id="service-two2">
+                  <section class="container">
+                    More
+                  </section>
+                </div>
+                -->
+                <div class="tab-pane fade out active" id="service-three2">
+                  <section class="container product-info">
+                    <div class="slideshowRecommend">
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/8970517741598.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-item" style="margin-left:20px">
+                        <div class="photo">
+                          <a title="Image 1" href="#">
+                          <img class="thumbnail img-responsive" src="http://media.monsoon.co.uk/medias/sys_master/8975387459614.jpg?buildNumber=4782">
+                          </a>
+                        </div>
+                        <div class="info">
+                          <div class="row">
+                            <div class="price col-md-6">
+                              <h5>
+                                Product Title
+                              </h5>
+                              <h5 class="price-text-color">
+                                £9.99
+                              </h5>
+                            </div>
+                            <div class="rating col-md-6">
+                              <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                              </i><i class="fa fa-star"></i>
+                            </div>
+                          </div>
+                          <div class="separator clear-left">
+                             <p class="btn-add" style="width:33%">
+                                <i class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></i>
+                             </p>
+                             <p class="btn-details" style="width:33%">
+                                <a href="product.html"><i class="glyphicon glyphicon-plus" style="font-size:20px"></i></a>
+                             </p>
+                             <p class="btn-details btndetails2" style="width:33%; border-left: 1px solid #E1E1E1;">
+                                <i class="glyphicon glyphicon-heart" style="font-size:20px"></i>
+                             </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                </div>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+        <!-- The menu -->
+        <nav id="menu">
+          <!--****** PROFILE  *******-->
+          <ul>
+            <li>
+              <div class="mm-nopanel panel-body">
+                <div class="media">
+                  <a class="pull-left" href="#">
+                  <img class="media-object img-circle" src="https://lh3.googleusercontent.com/-veNtxGy3nJk/AAAAAAAAAAI/AAAAAAAAAKQ/-EvbQZfuocM/s120-c/photo.jpg">
+                  </a>
+                  <div class="media-body">
+                    <h2 class="media-heading">Username</h2>
+                    username@email.com
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="Buttonbar mm-nopanel">
+                <input id="btn-1" name="btns" type="radio" />
+                <label for="btn-1">Women</label>
+                <input id="btn-2" name="btns" type="radio" />
+                <label for="btn-2">Men</label>
+                <input id="btn-3" name="btns" type="radio" />
+                <label for="btn-3">Kids</label>
+              </div>
+            </li>
+            <li><a href="index.html">Homepage</a></li>
+            <li class="Label">Shop</li>
+            <li>
+              <a href="#">Shop By Product</a>
+              <ul>
+                <li><a href="listing.html">Accesories</a></li>
+                <li><a href="listing.html">Jeans</a></li>
+                <li><a href="listing.html">Tops</a></li>
+                <li><a href="listing.html">Lingerie</a></li>
+                <li><a href="listing.html">Maternity</a></li>
+                <li><a href="listing.html">Skirts</a></li>
+                <li><a href="listing.html">Dresses</a></li>
+                <li><a href="listing.html">Jumpers</a></li>
+                <li><a href="listing.html">Footwear</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Special Offers</a>
+              <ul>
+                <li><a href="listing.html">Mix & Match Lingerie</a></li>
+                <li><a href="listing.html">Mix & Match Socks</a></li>
+                <li><a href="listing.html">Mix & Match Nightwear</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Collections</a>
+              <ul>
+                <li><a href="listing.html">Nightwear</a></li>
+                <li><a href="listing.html">Fancy Dress</a></li>
+                <li><a href="listing.html">Thermal</a></li>
+                <li><a href="listing.html">Winter</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Christmas</a>
+              <ul>
+                <li><a href="listing.html">Christmas Jumpers</a></li>
+                <li><a href="listing.html">Novelty</a></li>
+                <li><a href="listing.html">Party</a></li>
+              </ul>
+            </li>
+            <li class="Label">More Information</li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="">Size Guide</a></li>
+            <li><a href="">My orders</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Delivery Options</a></li>
+            <li><a href="">Store Finder</a></li>
+            <li class="Label">Settings</li>
+            <li><a href="/contact/address">App Settings</a></li>
+            <li><a href="/contact/form">My Account</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="newsletter">
+      <form class="" action="http://cl.s6.exct.net/subscribe.aspx?lid=13667" id="subscribeForm" name="subscribeForm" method="post">
+        <span style="word-wrap: break-word;">The latest info about the newest releases &amp; much more</span> <br>
+        <input class="newsletter-input exposer" name="Email Address" value="" type="text">
+        <input class="newsletter-submit" value="Subscribe" type="submit">
+        <input name="thx" value="" type="hidden">
+        <input name="err" value="" type="hidden">
+        <input name="usub" value="" type="hidden">
+        <input name="MID" value="" type="hidden">
+        <input name="ETSubscriberKey" value="SZ_" style="display:none" type="text">
+      </form>
+    </div>
+
+
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/notify.min.js"></script>
+    <script src="js/jquery.share.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.5.4/bootstrap-select.js" />
+    </body>
+    </html>
